@@ -1,0 +1,49 @@
+{
+  "compatibility": {
+    "compute_capability_min": null,
+    "cuda_min": null
+  },
+  "environment": {
+    "elixir_version": "1.18.4",
+    "generator_hash": "414f40015bf26aeec26eea176fde200f683161c67c898cbd549c228fab6baa0a",
+    "hardware": {
+      "accelerator": "cpu",
+      "cpu_features": [
+        "pclmul",
+        "ssse3",
+        "fma",
+        "sse4_1",
+        "sse4_2",
+        "aes",
+        "avx",
+        "f16c",
+        "avx2"
+      ],
+      "gpu_count": 0
+    },
+    "otp_version": "28",
+    "platform": {
+      "arch": "x86_64",
+      "os": "linux"
+    },
+    "python_packages_hash": "sha256:0dfa878b8ea4a779a81c2fcdff60c18681dbb9d08374c9a18176ab61b1c50cb6",
+    "python_platform": "x86_64-pc-linux-gnu",
+    "python_runtime_hash": "1319c137ea5d30f1d7599943cb0e72666648c20a94cf5932dd095364d07dafeb",
+    "python_version": "3.12.3",
+    "snakebridge_version": "0.8.1"
+  },
+  "libraries": {
+    "vllm": {
+      "hash": null,
+      "requested": "0.13.0",
+      "resolved": "0.13.0"
+    }
+  },
+  "python_packages": {
+    "vllm": {
+      "version": "0.13.0",
+      "hash": null
+    }
+  },
+  "version": "0.8.1"
+}

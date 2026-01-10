@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-01-10T09:06:51.617816Z",
+  "libraries": {
+    "vllm": {
+      "elixir_module": "Vllm",
+      "files": [
+        "vllm.ex"
+      ],
+      "generated_at": "2026-01-10T09:06:51.563419Z",
+      "path": "lib/snakebridge_generated",
+      "python_module": "vllm",
+      "python_version": "0.13.0",
+      "stats": {
+        "classes": 0,
+        "functions": 0,
+        "submodules": 0
+      }
+    }
+  },
+  "version": "2.1"
+}
