@@ -1,7 +1,7 @@
 defmodule VLLM.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
   @source_url "https://github.com/nshkrdotcom/vllm"
 
   def project do
@@ -109,7 +109,7 @@ defmodule VLLM.MixProject do
           "docs/guides/supported_models.md",
           "docs/guides/quantization.md"
         ],
-        Examples: ["examples"],
+        Examples: ["examples/README.md"],
         "Release Notes": ["CHANGELOG.md"]
       ],
       groups_for_modules: [

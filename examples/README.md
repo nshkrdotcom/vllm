@@ -34,6 +34,33 @@ Or run all examples with the test script:
 ./examples/run_all.sh
 ```
 
+### Runtime options
+
+Some examples accept CLI flags for overrides:
+
+```bash
+# Embeddings example (optional override)
+mix run examples/embeddings.exs -- --model "BAAI/bge-large-en-v1.5"
+
+# LoRA example (auto-downloads a public default adapter on first run)
+mix run examples/lora.exs
+
+# LoRA example (optional overrides)
+mix run examples/lora.exs -- \
+  --adapter /path/to/adapter \
+  --model "your-base-model" \
+  --name "adapter" \
+  --prompt "Write a short SQL query to list users." \
+  --rank 64
+
+# Timeout example (optional overrides)
+mix run examples/timeout_config.exs -- --model "facebook/opt-125m"
+mix run examples/timeout_config.exs -- --prompt "Explain Elixir in one sentence."
+```
+
+The default LoRA adapter comes from `edbeeching/opt-125m-lora` (base model `facebook/opt-125m`)
+and is downloaded automatically. This requires network access the first time it runs.
+
 ---
 
 ## Core Examples
@@ -165,7 +192,7 @@ Vector embeddings for semantic search:
 - Use cases
 
 ```elixir
-llm = VLLM.llm!("intfloat/e5-mistral-7b-instruct", task: "embed")
+llm = VLLM.llm!("intfloat/e5-mistral-7b-instruct", runner: "pooling")
 outputs = VLLM.embed!(llm, ["Hello, world!"])
 ```
 
@@ -285,7 +312,6 @@ CUDA out of memory
 Model not found
 ```
 - Check model name on HuggingFace
-- Ensure HF_TOKEN is set for gated models
 - Check internet connection
 
 ### Timeout Errors

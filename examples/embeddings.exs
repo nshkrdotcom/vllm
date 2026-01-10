@@ -1,96 +1,96 @@
 # Embeddings Example
 #
 # This example demonstrates using vLLM for embedding generation:
-# - Loading embedding models
+# - Loading an embedding model
 # - Generating text embeddings
 # - Batch embedding
 #
-# Run: mix run examples/embeddings.exs
+# IMPORTANT: vLLM requires a CUDA-capable GPU.
 #
-# Note: Requires an embedding-capable model
+# Run: mix run examples/embeddings.exs
 
 IO.puts("=== Embeddings Example ===\n")
+IO.puts("Note: vLLM requires a CUDA-capable GPU.\n")
 
-IO.puts("--- Supported Embedding Models ---")
+{opts, _, _} = OptionParser.parse(System.argv(), switches: [model: :string])
+model = opts[:model] || "BAAI/bge-small-en-v1.5"
 
-IO.puts("""
-vLLM supports various embedding/pooling models:
-
-| Model                          | Dimensions | Use Case          |
-|--------------------------------|------------|-------------------|
-| intfloat/e5-mistral-7b-instruct| 4096       | General purpose   |
-| BAAI/bge-large-en-v1.5         | 1024       | English text      |
-| sentence-transformers/all-*    | Various    | Sentence similarity|
-""")
-
-IO.puts("--- Example: Loading Embedding Model ---")
-
-IO.puts("""
-# Load an embedding model
-llm = VLLM.llm!("intfloat/e5-mistral-7b-instruct",
-  task: "embed",
-  dtype: "float16"
-)
-
-# Generate embeddings
-texts = ["Hello, world!", "How are you?"]
-outputs = VLLM.embed!(llm, texts)
-""")
-
-IO.puts("--- Example: Batch Embedding ---")
-
-IO.puts("""
-# Efficient batch embedding
-documents = [
-  "The quick brown fox jumps over the lazy dog.",
-  "Machine learning is transforming industries.",
+texts = [
   "Elixir is a functional programming language.",
-  "vLLM provides high-throughput inference."
+  "vLLM provides high-throughput inference.",
+  "Embeddings turn text into vectors."
 ]
 
-embeddings = VLLM.embed!(llm, documents)
+unwrap_embedding = fn
+  [first | _] when is_list(first) -> first
+  list -> list
+end
 
-# Process embeddings
-Enum.each(embeddings, fn output ->
-  embedding = VLLM.attr!(output, "outputs")
-  # embedding is a list of floats (vector)
+extract_embedding = fn output ->
+  extract_from_outputs = fn outputs ->
+    cond do
+      VLLM.ref?(outputs) ->
+        VLLM.attr!(outputs, "embedding")
+
+      is_map(outputs) ->
+        Map.get(outputs, "embedding") || Map.get(outputs, :embedding) || outputs
+
+      true ->
+        outputs
+    end
+  end
+
+  outputs =
+    cond do
+      VLLM.ref?(output) ->
+        try do
+          VLLM.attr!(output, "outputs")
+        rescue
+          _ -> output
+        end
+
+      is_map(output) ->
+        Map.get(output, "outputs") || Map.get(output, :outputs) || output
+
+      true ->
+        output
+    end
+
+  outputs
+  |> extract_from_outputs.()
+  |> unwrap_embedding.()
+end
+
+IO.puts("Loading embedding model: #{model}")
+
+VLLM.run(fn ->
+  llm =
+    VLLM.llm!(model,
+      runner: "pooling",
+      dtype: "float16",
+      gpu_memory_utilization: 0.8
+    )
+
+  outputs = VLLM.embed!(llm, texts)
+
+  Enum.zip(texts, outputs)
+  |> Enum.each(fn {text, output} ->
+    vector = extract_embedding.(output)
+
+    unless is_list(vector) do
+      IO.puts("Unexpected embedding output: #{inspect(vector)}")
+      System.halt(1)
+    end
+
+    preview =
+      vector
+      |> Enum.take(6)
+      |> Enum.map(&Float.round(&1, 4))
+
+    IO.puts("\nText: #{text}")
+    IO.puts("Dimensions: #{length(vector)}")
+    IO.puts("Preview: [#{Enum.join(preview, ", ")} ...]")
+  end)
+
+  IO.puts("\nEmbeddings example complete!")
 end)
-""")
-
-IO.puts("--- Embedding Use Cases ---")
-
-IO.puts("""
-Common use cases for embeddings:
-
-1. Semantic Search
-   - Convert queries and documents to embeddings
-   - Find similar documents using cosine similarity
-
-2. Clustering
-   - Group similar texts together
-   - Topic modeling
-
-3. RAG (Retrieval-Augmented Generation)
-   - Embed knowledge base documents
-   - Retrieve relevant context for LLM prompts
-
-4. Classification
-   - Use embeddings as features for classifiers
-""")
-
-IO.puts("--- Pooling Parameters ---")
-
-IO.puts("""
-# Create pooling parameters
-params = VLLM.pooling_params!(additional_data: %{})
-
-# Use with embed
-outputs = VLLM.embed!(llm, texts, pooling_params: params)
-""")
-
-# Note: Actual embedding demo would require compatible model
-IO.puts("\n--- Note ---")
-IO.puts("Actual embedding generation requires an embedding-capable model.")
-IO.puts("Install models like 'intfloat/e5-mistral-7b-instruct' for full functionality.")
-
-IO.puts("\nEmbeddings example complete!")

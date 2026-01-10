@@ -355,7 +355,7 @@ defmodule VLLM do
 
   ## Examples
 
-      llm = VLLM.llm!("intfloat/e5-mistral-7b-instruct", task: "embed")
+      llm = VLLM.llm!("intfloat/e5-mistral-7b-instruct", runner: "pooling")
       outputs = VLLM.embed!(llm, ["Hello, world!", "How are you?"])
 
   ## Returns
@@ -365,13 +365,13 @@ defmodule VLLM do
   """
   def embed(llm, texts, opts \\ []) do
     texts = List.wrap(texts)
-    SnakeBridge.method(llm, "encode", [texts], opts)
+    SnakeBridge.method(llm, "embed", [texts], opts)
   end
 
   @doc "Bang version of embed/3."
   def embed!(llm, texts, opts \\ []) do
     texts = List.wrap(texts)
-    SnakeBridge.method!(llm, "encode", [texts], opts)
+    SnakeBridge.method!(llm, "embed", [texts], opts)
   end
 
   # ---------------------------------------------------------------------------

@@ -100,10 +100,10 @@ VLLM.llm!("deepseek-ai/deepseek-coder-6.7b-base")
 
 ```elixir
 # E5 Mistral
-VLLM.llm!("intfloat/e5-mistral-7b-instruct", task: "embed")
+VLLM.llm!("intfloat/e5-mistral-7b-instruct", runner: "pooling")
 
 # BGE
-VLLM.llm!("BAAI/bge-large-en-v1.5", task: "embed")
+VLLM.llm!("BAAI/bge-large-en-v1.5", runner: "pooling")
 ```
 
 ## Multimodal Models

@@ -75,7 +75,7 @@ Add `vllm` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:vllm, "~> 0.1.0"}
+    {:vllm, "~> 0.1.1"}
   ]
 end
 ```
@@ -216,7 +216,7 @@ guided = VLLM.guided_decoding_params!(choice: ["yes", "no", "maybe"])
 Generate vector embeddings with pooling models:
 
 ```elixir
-llm = VLLM.llm!("intfloat/e5-mistral-7b-instruct", task: "embed")
+llm = VLLM.llm!("intfloat/e5-mistral-7b-instruct", runner: "pooling")
 embeddings = VLLM.embed!(llm, ["Hello, world!", "How are you?"])
 ```
 

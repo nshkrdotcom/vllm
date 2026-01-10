@@ -24,3 +24,5 @@ vllm-*.tar
 
 vllm_python_source/
 /priv/plts/
+/examples/assets/
+/priv/snakebridge/registry.json

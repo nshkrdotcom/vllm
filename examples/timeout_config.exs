@@ -1,88 +1,56 @@
 # Timeout Configuration Example
 #
 # This example demonstrates timeout configuration for vLLM operations:
-# - Default ML inference timeout
-# - Per-call timeout overrides
 # - Timeout profiles
-# - Timeout helper functions
+# - Per-call timeout overrides
+# - Helper functions
+#
+# IMPORTANT: vLLM requires a CUDA-capable GPU.
 #
 # Run: mix run examples/timeout_config.exs
 
 IO.puts("=== Timeout Configuration Example ===\n")
+IO.puts("Note: vLLM requires a CUDA-capable GPU.\n")
 
-# Note: This example demonstrates the API without running actual inference
-# to avoid long wait times in the demo
+{opts, _, _} =
+  OptionParser.parse(System.argv(),
+    switches: [model: :string, prompt: :string]
+  )
 
-IO.puts("--- Timeout Profiles ---")
-IO.puts("vLLM uses SnakeBridge's timeout architecture with these profiles:\n")
-IO.puts("| Profile        | Timeout  | Use Case                    |")
-IO.puts("|----------------|----------|------------------------------|")
-IO.puts("| :default       | 2 min    | Standard Python calls        |")
-IO.puts("| :streaming     | 30 min   | Streaming responses          |")
-IO.puts("| :ml_inference  | 10 min   | LLM inference (VLLM default) |")
-IO.puts("| :batch_job     | 1 hour   | Long-running batch operations|")
+model = opts[:model] || "facebook/opt-125m"
+prompt = opts[:prompt] || "Explain Elixir in one sentence."
 
-IO.puts("\n--- Using timeout_profile/1 ---")
-profile_opts = VLLM.timeout_profile(:batch_job)
-IO.puts("VLLM.timeout_profile(:batch_job)")
-IO.puts("=> #{inspect(profile_opts)}")
+IO.puts("Loading model: #{model}")
 
-IO.puts("\n--- Using timeout_ms/1 ---")
-ms_opts = VLLM.timeout_ms(300_000)
-IO.puts("VLLM.timeout_ms(300_000)")
-IO.puts("=> #{inspect(ms_opts)}")
+VLLM.run(fn ->
+  llm =
+    VLLM.llm!(model,
+      max_model_len: 2048,
+      gpu_memory_utilization: 0.8
+    )
 
-IO.puts("\n--- Using with_timeout/2 ---")
+  params = VLLM.sampling_params!(temperature: 0.2, max_tokens: 32)
 
-# Add timeout to empty options
-opts1 = VLLM.with_timeout([], timeout: 60_000)
-IO.puts("VLLM.with_timeout([], timeout: 60_000)")
-IO.puts("=> #{inspect(opts1)}")
+  IO.puts("\n--- Using timeout profile (:ml_inference) ---")
 
-# Add timeout profile to existing options
-opts2 = VLLM.with_timeout([sampling_params: :my_params], timeout_profile: :batch_job)
-IO.puts("\nVLLM.with_timeout([sampling_params: :my_params], timeout_profile: :batch_job)")
-IO.puts("=> #{inspect(opts2)}")
+  outputs =
+    VLLM.generate!(
+      llm,
+      prompt,
+      Keyword.merge([sampling_params: params], VLLM.timeout_profile(:ml_inference))
+    )
 
-# Merge with existing runtime options
-opts3 = VLLM.with_timeout([__runtime__: [verbose: true]], timeout: 120_000)
-IO.puts("\nVLLM.with_timeout([__runtime__: [verbose: true]], timeout: 120_000)")
-IO.puts("=> #{inspect(opts3)}")
+  output = Enum.at(outputs, 0)
+  completion = VLLM.attr!(output, "outputs") |> Enum.at(0)
+  IO.puts("Response: #{VLLM.attr!(completion, "text")}")
 
-IO.puts("\n--- Example Usage Patterns ---")
+  IO.puts("\n--- Using explicit timeout (120_000 ms) ---")
 
-IO.puts("""
+  opts = VLLM.with_timeout([sampling_params: params], timeout: 120_000)
+  outputs = VLLM.generate!(llm, prompt, opts)
+  output = Enum.at(outputs, 0)
+  completion = VLLM.attr!(output, "outputs") |> Enum.at(0)
+  IO.puts("Response: #{VLLM.attr!(completion, "text")}")
 
-# 1. Quick inference with short timeout
-VLLM.generate!(llm, prompt,
-  sampling_params: params,
-  __runtime__: [timeout: 30_000]  # 30 seconds
-)
-
-# 2. Batch job with long timeout
-VLLM.generate!(llm, large_batch,
-  Keyword.merge([sampling_params: params], VLLM.timeout_profile(:batch_job))
-)
-
-# 3. Using helper for cleaner code
-opts = VLLM.with_timeout([sampling_params: params], timeout_profile: :ml_inference)
-VLLM.generate!(llm, prompts, opts)
-
-# 4. Per-call timeout in milliseconds
-VLLM.generate!(llm, prompt,
-  Keyword.merge([sampling_params: params], VLLM.timeout_ms(300_000))
-)
-""")
-
-IO.puts("--- Configuration in config/config.exs ---")
-
-IO.puts("""
-
-# Set vLLM to use ML inference profile by default:
-config :snakebridge,
-  runtime: [
-    library_profiles: %{"vllm" => :ml_inference}
-  ]
-""")
-
-IO.puts("\nTimeout configuration example complete!")
+  IO.puts("\nTimeout configuration example complete!")
+end)
