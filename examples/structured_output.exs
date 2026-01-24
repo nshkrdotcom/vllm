@@ -11,57 +11,50 @@
 
 IO.puts("=== Structured Output Example ===\n")
 
-VLLM.run(fn ->
-  IO.puts("Checking guided decoding support...")
+Snakepit.run_as_script(fn ->
+  version =
+    case Vllm.CollectEnv.get_vllm_version() do
+      {:ok, value} -> value
+      {:error, _} -> "unknown"
+    end
 
-  if VLLM.guided_decoding_supported?() do
-    version = VLLM.version!()
-    IO.puts("Guided decoding is available in vLLM #{version}.")
+  IO.puts("Using vLLM #{version}.")
+  IO.puts("Checking structured outputs via SamplingParams...")
 
-    IO.puts("\n--- Choice-Constrained Output ---")
-    guided_choice = VLLM.guided_decoding_params!(choice: ["positive", "negative", "neutral"])
-    IO.puts("Choice params: #{inspect(guided_choice)}")
+  json_schema = ~s({
+    "type": "object",
+    "properties": {
+      "name": {"type": "string"},
+      "age": {"type": "integer"},
+      "city": {"type": "string"}
+    },
+    "required": ["name", "age", "city"]
+  })
 
-    IO.puts("\n--- JSON Schema-Guided Output ---")
-    json_schema = ~s({
-      "type": "object",
-      "properties": {
-        "name": {"type": "string"},
-        "age": {"type": "integer"},
-        "city": {"type": "string"}
-      },
-      "required": ["name", "age", "city"]
-    })
-    guided_json = VLLM.guided_decoding_params!(json: json_schema)
-    IO.puts("JSON Schema: #{json_schema}")
-    IO.puts("JSON params: #{inspect(guided_json)}")
+  scenarios = [
+    {"Choice-Constrained Output", %{choice: ["positive", "negative", "neutral"]}},
+    {"JSON Schema-Guided Output", %{json: json_schema}},
+    {"Regex-Constrained Output", %{regex: "[0-9]{3}-[0-9]{3}-[0-9]{4}"}},
+    {"Email Pattern", %{regex: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"}}
+  ]
 
-    IO.puts("\n--- Regex-Constrained Output ---")
-    phone_regex = "[0-9]{3}-[0-9]{3}-[0-9]{4}"
-    guided_regex = VLLM.guided_decoding_params!(regex: phone_regex)
-    IO.puts("Regex pattern: #{phone_regex}")
-    IO.puts("Regex params: #{inspect(guided_regex)}")
+  Enum.each(scenarios, fn {title, structured_outputs} ->
+    IO.puts("\n--- #{title} ---")
 
-    IO.puts("\n--- Email Pattern ---")
-    email_regex = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
-    guided_email = VLLM.guided_decoding_params!(regex: email_regex)
-    IO.puts("Email regex: #{email_regex}")
-    IO.puts("Email params: #{inspect(guided_email)}")
-  else
-    version =
-      case VLLM.version() do
-        {:ok, value} -> value
-        {:error, _} -> "unknown"
-      end
+    case Vllm.SamplingParams.new([], structured_outputs: structured_outputs) do
+      {:ok, params} ->
+        case Vllm.SamplingParams.structured_outputs(params) do
+          {:ok, value} ->
+            IO.puts("Structured params: #{inspect(value)}")
 
-    IO.puts("Guided decoding is not available in vLLM #{version}; skipping runtime demo.")
+          {:error, reason} ->
+            IO.puts("Could not read structured outputs: #{inspect(reason)}")
+        end
 
-    IO.puts("\n--- Example Configurations ---")
-    IO.puts("Choice: positive | negative | neutral")
-    IO.puts("JSON schema: {name: string, age: integer, city: string}")
-    IO.puts("Regex: [0-9]{3}-[0-9]{3}-[0-9]{4}")
-    IO.puts("Email regex: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}")
-  end
+      {:error, reason} ->
+        IO.puts("Structured outputs not available: #{inspect(reason)}")
+    end
+  end)
 
   IO.puts("\nStructured output example complete!")
 end)

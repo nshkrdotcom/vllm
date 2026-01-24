@@ -30,7 +30,7 @@ IO.puts("--- Example: Loading AWQ Quantized Model ---")
 
 IO.puts("""
 # AWQ quantized Llama 2 7B
-llm = VLLM.llm!("TheBloke/Llama-2-7B-AWQ",
+{:ok, llm} = Vllm.LLM.new("TheBloke/Llama-2-7B-AWQ",
   quantization: "awq",
   dtype: "auto"
 )
@@ -40,7 +40,7 @@ IO.puts("--- Example: Loading GPTQ Quantized Model ---")
 
 IO.puts("""
 # GPTQ quantized model
-llm = VLLM.llm!("TheBloke/Llama-2-7B-GPTQ",
+{:ok, llm} = Vllm.LLM.new("TheBloke/Llama-2-7B-GPTQ",
   quantization: "gptq",
   dtype: "float16"
 )
@@ -61,9 +61,16 @@ Model: Llama 2 7B
 """)
 
 # Demonstration run (with opt-125m for speed)
-VLLM.run(fn ->
+Snakepit.run_as_script(fn ->
   IO.puts("\n--- Demo: Loading Standard Model ---")
   IO.puts("Loading facebook/opt-125m (small model for demo)...")
+
+  get_attr = fn ref, attr ->
+    case SnakeBridge.Runtime.get_attr(ref, attr) do
+      {:ok, value} -> value
+      {:error, reason} -> raise "Failed to read #{attr}: #{inspect(reason)}"
+    end
+  end
 
   format_error = fn error ->
     cond do
@@ -73,12 +80,27 @@ VLLM.run(fn ->
   end
 
   result =
-    with {:ok, llm} <- VLLM.llm("facebook/opt-125m", dtype: "auto"),
-         {:ok, params} <- VLLM.sampling_params(temperature: 0.7, max_tokens: 30),
-         {:ok, outputs} <- VLLM.generate(llm, "Quantization helps", sampling_params: params) do
+    with {:ok, llm} <- Vllm.LLM.new("facebook/opt-125m", dtype: "auto"),
+         llm_ref = SnakeBridge.Ref.from_wire_format(llm),
+         runtime_opts <-
+           (case llm_ref.pool_name do
+              nil -> [session_id: llm_ref.session_id]
+              pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+            end),
+         {:ok, params} <-
+           Vllm.SamplingParams.new([],
+             temperature: 0.7,
+             max_tokens: 30,
+             __runtime__: runtime_opts
+           ),
+         {:ok, outputs} <-
+           Vllm.LLM.generate(llm, ["Quantization helps"], [],
+             sampling_params: params,
+             __runtime__: runtime_opts
+           ) do
       output = Enum.at(outputs, 0)
-      completion = VLLM.attr!(output, "outputs") |> Enum.at(0)
-      IO.puts("Generated: Quantization helps#{VLLM.attr!(completion, "text")}")
+      completion = get_attr.(output, :outputs) |> Enum.at(0)
+      IO.puts("Generated: Quantization helps#{get_attr.(completion, :text)}")
       :ok
     end
 

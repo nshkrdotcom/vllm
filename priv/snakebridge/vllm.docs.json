@@ -1,0 +1,2733 @@
+{
+  "library": "vllm",
+  "profiles": {
+    "full": {
+      "modules": [
+        "vllm",
+        "vllm.assets",
+        "vllm.attention",
+        "vllm.beam_search",
+        "vllm.benchmarks",
+        "vllm.collect_env",
+        "vllm.compilation",
+        "vllm.config",
+        "vllm.connections",
+        "vllm.device_allocator",
+        "vllm.distributed",
+        "vllm.engine",
+        "vllm.entrypoints",
+        "vllm.env_override",
+        "vllm.envs",
+        "vllm.exceptions",
+        "vllm.forward_context",
+        "vllm.grpc",
+        "vllm.inputs",
+        "vllm.logger",
+        "vllm.logging_utils",
+        "vllm.logits_process",
+        "vllm.logprobs",
+        "vllm.lora",
+        "vllm.model_executor",
+        "vllm.model_executor.models.adapters",
+        "vllm.model_executor.models.interfaces",
+        "vllm.model_executor.models.interfaces_base",
+        "vllm.model_inspection",
+        "vllm.multimodal",
+        "vllm.multimodal.inputs",
+        "vllm.multimodal.parse",
+        "vllm.multimodal.processing",
+        "vllm.multimodal.registry",
+        "vllm.outputs",
+        "vllm.platforms",
+        "vllm.plugins",
+        "vllm.pooling_params",
+        "vllm.profiler",
+        "vllm.ray",
+        "vllm.reasoning",
+        "vllm.renderers",
+        "vllm.sampling_params",
+        "vllm.scalar_type",
+        "vllm.scripts",
+        "vllm.sequence",
+        "vllm.tasks",
+        "vllm.tokenizers",
+        "vllm.tool_parsers",
+        "vllm.tracing",
+        "vllm.transformers_utils",
+        "vllm.triton_utils",
+        "vllm.usage",
+        "vllm.utils",
+        "vllm.v1",
+        "vllm.version"
+      ],
+      "objects": [
+        {
+          "kind": "data",
+          "name": "vllm.AsyncLLMEngine"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.LLM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.LLMEngine"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.PoolingParams"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.SamplingParams"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.beam_search.BeamSearchInstance"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.beam_search.BeamSearchOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.beam_search.BeamSearchSequence"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.beam_search.LoRARequest"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.beam_search.Logprob"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.beam_search.MultiModalDataDict"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.beam_search.create_sort_beams_key_function"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.beam_search.get_beam_search_score"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.collect_env.DEFAULT_CONDA_PATTERNS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.collect_env.DEFAULT_PIP_PATTERNS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.collect_env.SystemEnv"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.collect_env.TORCH_AVAILABLE"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.check_release_file"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.collect_env.env_info_fmt"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.collect_env.environment_variables"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_cachingallocator_config"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_clang_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_cmake_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_conda_packages"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_cpu_info"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_cuda_module_loading_config"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_cudnn_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_env_info"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_env_vars"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_gcc_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_gpu_info"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_gpu_topo"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_libc_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_lsb_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_mac_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_nvidia_driver_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_nvidia_smi"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_os"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_pip_packages"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_platform"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_pretty_env_info"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_python_platform"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_rocm_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_running_cuda_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_vllm_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.get_windows_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.is_uv_venv"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.is_xnnpack_available"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.main"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.pretty_str"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.run"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.run_and_parse_first_match"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.run_and_read_all"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.run_and_return_first_line"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.collect_env.summarize_vllm_build_flags"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.AttentionConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.CUDAGraphMode"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.CacheConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.CompilationConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.CompilationMode"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.config.ConfigType"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.DeviceConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ECTransferConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.EPLBConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.KVEventsConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.KVTransferConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.LoRAConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.LoadConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ModelConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.MultiModalConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ObservabilityConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ParallelConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.PassConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.PoolerConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ProfilerConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.SchedulerConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.SpeculativeConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.SpeechToTextConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.StructuredOutputsConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.SupportsMetricsInfo"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.VllmConfig"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.config.__all__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.config"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.get_attr_docs"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.get_cached_compilation_config"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.get_current_vllm_config"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.get_current_vllm_config_or_none"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.get_layers_from_vllm_config"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.is_init_field"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.iter_architecture_defaults"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.set_current_vllm_config"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.str_dtype_to_torch_dtype"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.try_match_architecture_defaults"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.config.update_config"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.connections.HTTPConnection"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.connections.global_http_connection"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.distributed.DeviceCommunicatorBase"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.distributed.GraphCaptureContext"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.distributed.GroupCoordinator"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.distributed.StatelessProcessGroup"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.distributed.TensorMetadata"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.distributed.USE_SCHED_YIELD"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.all_gather"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.all_gather_fake"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.all_reduce"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.all_reduce_fake"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.broadcast_tensor_dict"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.cleanup_dist_env_and_memory"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.destroy_distributed_environment"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.destroy_model_parallel"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.direct_register_custom_op"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.divide"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.ensure_divisibility"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.ensure_model_parallel_initialized"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.distributed.get_context_model_parallel_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_dcp_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_decode_context_model_parallel_rank"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_decode_context_model_parallel_world_size"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_distributed_init_method"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_dp_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_ep_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_inner_dp_world_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_node_count"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_pcp_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_pp_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_pp_indices"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_tcp_uri"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_tensor_model_parallel_rank"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_tensor_model_parallel_world_size"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_tp_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.get_world_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.graph_capture"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.in_the_same_node_as"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.init_distributed_environment"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.init_gloo_process_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.init_logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.init_model_parallel_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.init_world_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.initialize_model_parallel"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.is_global_first_rank"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.is_local_first_rank"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.is_torch_equal_or_newer"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.distributed.logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.model_parallel_is_initialized"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.patch_tensor_parallel_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.patched_fused_scaled_matmul_reduce_scatter"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.patched_fused_scaled_matmul_reduce_scatter_fake"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.prepare_communication_buffer_for_model"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.reduce_scatter"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.reduce_scatter_fake"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.resolve_obj_by_qualname"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.sched_yield"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.set_custom_all_reduce"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.split_tensor_along_last_dim"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.stateless_destroy_torch_distributed_process_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.stateless_init_torch_distributed_process_group"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.suppress_stdout"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.tensor_model_parallel_all_gather"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.tensor_model_parallel_all_reduce"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.tensor_model_parallel_gather"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.distributed.tensor_model_parallel_reduce_scatter"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.env_override._patch_get_raw_stream_if_needed"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.env_override._update_scheduler_patched"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.env_override.get_graph_partition_signature_patched"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.env_override.init_logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.env_override.is_torch_equal"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.env_override.logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.env_override.memory_plan_reuse_patched"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.env_override.should_partition_patched"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.CMAKE_BUILD_TYPE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.CUDA_VISIBLE_DEVICES"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.K_SCALE_CONSTANT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.LD_LIBRARY_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.LOCAL_RANK"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.MAX_JOBS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.NO_COLOR"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.NVCC_THREADS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.Q_SCALE_CONSTANT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.S3_ACCESS_KEY_ID"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.S3_ENDPOINT_URL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.S3_SECRET_ACCESS_KEY"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VERBOSE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ALL2ALL_BACKEND"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ALLOW_CHUNKED_LOCAL_ATTN_WITH_HYBRID_KV_CACHE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ALLOW_INSECURE_SERIALIZATION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ALLOW_LONG_MAX_MODEL_LEN"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ALLOW_RUNTIME_LORA_UPDATING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ALLREDUCE_USE_SYMM_MEM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_API_KEY"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ASSETS_CACHE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ASSETS_CACHE_MODEL_CLEAN"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_AUDIO_FETCH_TIMEOUT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_BLOCKSCALE_FP8_GEMM_FLASHINFER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CACHE_ROOT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_COMPILE_CACHE_SAVE_FORMAT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_COMPUTE_NANS_IN_LOGITS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CONFIGURE_LOGGING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CONFIG_ROOT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CPU_KVCACHE_SPACE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CPU_NUM_OF_RESERVED_CPU"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CPU_OMP_THREADS_BIND"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CPU_SGL_KERNEL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CUDART_SO_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_CUSTOM_SCOPES_FOR_PROFILING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DBO_COMM_SMS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEBUG_DUMP_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEBUG_LOG_API_SERVER_RESPONSE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEBUG_MFU_METRICS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEBUG_WORKSPACE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEEPEPLL_NVFP4_DISPATCH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEEPEP_BUFFER_SIZE_MB"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEEPEP_HIGH_THROUGHPUT_FORCE_INTRA_NODE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEEPEP_LOW_LATENCY_USE_MNNVL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DEEP_GEMM_WARMUP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DISABLED_KERNELS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DISABLE_COMPILE_CACHE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DISABLE_LOG_LOGO"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DISABLE_PYNCCL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DISABLE_SHARED_EXPERTS_STREAM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DOCKER_BUILD_CONTEXT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DO_NOT_TRACK"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DP_MASTER_IP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DP_MASTER_PORT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DP_RANK"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DP_RANK_LOCAL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_DP_SIZE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENABLE_CUDAGRAPH_GC"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENABLE_FUSED_MOE_ACTIVATION_CHUNKING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENABLE_INDUCTOR_COORDINATE_DESCENT_TUNING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENABLE_INDUCTOR_MAX_AUTOTUNE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENABLE_MOE_DP_CHUNK"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENABLE_RESPONSES_API_STORE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENABLE_V1_MULTIPROCESSING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENGINE_ITERATION_TIMEOUT_S"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ENGINE_READY_TIMEOUT_S"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_EXECUTE_MODEL_TIMEOUT_SECONDS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_FLASHINFER_MOE_BACKEND"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_FLASHINFER_WORKSPACE_BUFFER_SIZE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_FLOAT32_MATMUL_PRECISION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_FORCE_AOT_LOAD"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_FUSED_MOE_CHUNK_SIZE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_GC_DEBUG"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_GPT_OSS_HARMONY_SYSTEM_INSTRUCTIONS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_GPT_OSS_SYSTEM_TOOL_MCP_LABELS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_HAS_FLASHINFER_CUBIN"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_HOST_IP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_HTTP_TIMEOUT_KEEP_ALIVE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_IMAGE_FETCH_TIMEOUT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_KEEP_ALIVE_ON_ENGINE_DEATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_KV_CACHE_LAYOUT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_KV_EVENTS_USE_INT_BLOCK_HASHES"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOGGING_COLOR"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOGGING_CONFIG_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOGGING_LEVEL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOGGING_PREFIX"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOGGING_STREAM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOG_BATCHSIZE_INTERVAL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOG_MODEL_INSPECTION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOG_STATS_INTERVAL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LOOPBACK_IP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_LORA_RESOLVER_CACHE_DIR"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MAIN_CUDA_VERSION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MARLIN_INPUT_DTYPE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MARLIN_USE_ATOMIC_ADD"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MAX_AUDIO_CLIP_FILESIZE_MB"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MAX_TOKENS_PER_EXPERT_FP4_MOE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MEDIA_CONNECTOR"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MEDIA_LOADING_THREAD_COUNT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MEDIA_URL_ALLOW_REDIRECTS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MLA_DISABLE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MM_HASHER_ALGORITHM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MODEL_REDIRECT_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MOE_DP_CHUNK_SIZE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MOE_USE_DEEP_GEMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MOONCAKE_ABORT_REQUEST_TIMEOUT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MOONCAKE_BOOTSTRAP_PORT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MORIIO_CONNECTOR_READ_MODE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MORIIO_NUM_WORKERS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MORIIO_POST_BATCH_SIZE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MORIIO_QP_PER_TRANSFER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MQ_MAX_CHUNK_BYTES_MB"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MSGPACK_ZERO_COPY_THRESHOLD"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_MXFP4_USE_MARLIN"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_NCCL_INCLUDE_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_NCCL_SO_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_NIXL_ABORT_REQUEST_TIMEOUT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_NIXL_SIDE_CHANNEL_HOST"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_NIXL_SIDE_CHANNEL_PORT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_NO_USAGE_STATS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_NVFP4_GEMM_BACKEND"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_NVTX_SCOPES_FOR_PROFILING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_OBJECT_STORAGE_SHM_BUFFER_NAME"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_PATTERN_MATCH_DEBUG"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_PLUGINS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_PORT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_PP_LAYER_PARTITION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_PROFILER_DELAY_ITERS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_PROFILER_MAX_ITERS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_RANDOMIZE_DP_DUMMY_INPUTS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_RAY_BUNDLE_INDICES"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_RAY_DP_PACK_STRATEGY"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_RAY_PER_WORKER_GPUS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_RINGBUFFER_WARNING_INTERVAL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_CUSTOM_PAGED_ATTN"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_FP8_MFMA_PAGE_ATTN"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_FP8_PADDING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_MOE_PADDING"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_QUICK_REDUCE_CAST_BF16_TO_FP16"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_QUICK_REDUCE_MAX_SIZE_BYTES_MB"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_QUICK_REDUCE_QUANTIZATION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_SHUFFLE_KV_CACHE_LAYOUT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_SLEEP_MEM_CHUNK_SIZE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_FP4BMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_FP4_ASM_GEMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_FP8BMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_FUSION_SHARED_EXPERTS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_LINEAR"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_MHA"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_MLA"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_MOE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_PAGED_ATTN"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_RMSNORM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_TRITON_GEMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_TRITON_ROPE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_AITER_UNIFIED_ATTENTION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_ROCM_USE_SKINNY_GEMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_RPC_BASE_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_RPC_TIMEOUT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_SERVER_DEV_MODE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_SHARED_EXPERTS_STREAM_TOKEN_THRESHOLD"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_SKIP_P2P_CHECK"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_SKIP_PRECOMPILED_VERSION_SUFFIX"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_SLEEP_WHEN_IDLE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TARGET_DEVICE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TOOL_JSON_ERROR_AUTOMATIC_RETRY"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TOOL_PARSE_REGEX_TIMEOUT_SECONDS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_CUDA_PROFILE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_PROFILER_DIR"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_PROFILER_DISABLE_ASYNC_LLM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_PROFILER_DUMP_CUDA_TIME_TOTAL"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_PROFILER_RECORD_SHAPES"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_PROFILER_USE_GZIP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_PROFILER_WITH_FLOPS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_PROFILER_WITH_PROFILE_MEMORY"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TORCH_PROFILER_WITH_STACK"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TPU_BUCKET_PADDING_GAP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TPU_MOST_MODEL_LEN"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TPU_USING_PATHWAYS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TRACE_FUNCTION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_TUNED_CONFIG_FOLDER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USAGE_SOURCE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USAGE_STATS_SERVER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_AOT_COMPILE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_BYTECODE_HOOK"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_DEEP_GEMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_DEEP_GEMM_E8M0"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_DEEP_GEMM_TMA_ALIGNED_SCALES"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_EXPERIMENTAL_PARSER_CONTEXT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FBGEMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FLASHINFER_MOE_FP16"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FLASHINFER_MOE_FP4"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FLASHINFER_MOE_FP8"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FLASHINFER_MOE_MXFP4_BF16"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FLASHINFER_MOE_MXFP4_MXFP8"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FLASHINFER_MOE_MXFP4_MXFP8_CUTLASS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FLASHINFER_SAMPLER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_FUSED_MOE_GROUPED_TOPK"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_MEGA_AOT_ARTIFACT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_MODELSCOPE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_NCCL_SYMM_MEM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_NVFP4_CT_EMULATIONS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_PRECOMPILED"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_RAY_COMPILED_DAG_CHANNEL_TYPE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_RAY_COMPILED_DAG_OVERLAP_COMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_RAY_WRAPPED_PP_COMM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_STANDALONE_COMPILE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_TRITON_AWQ"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_USE_V2_MODEL_RUNNER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_V1_OUTPUT_PROC_CHUNK_SIZE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_V1_USE_OUTLINES_CACHE"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_VIDEO_FETCH_TIMEOUT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_VIDEO_LOADER_BACKEND"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_WORKER_MULTIPROC_METHOD"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_XGRAMMAR_CACHE_MB"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_XLA_CACHE_PATH"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_XLA_CHECK_RECOMPILATION"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.VLLM_XLA_USE_SPMD"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.V_SCALE_CONSTANT"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.__dir__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.__getattr__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs._is_envs_cache_enabled"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.compile_factors"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.disable_compile_cache"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.disable_envs_cache"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.enable_envs_cache"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.env_list_with_choices"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.env_set_with_choices"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.env_with_choices"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.environment_variables"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.get_default_cache_root"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.get_default_config_root"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.get_env_or_set_default"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.get_vllm_port"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.is_set"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.envs.logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.maybe_convert_bool"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.maybe_convert_int"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.envs.use_aot_compile"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.exceptions.VLLMValidationError"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.forward_context.AttentionMetadata"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.forward_context.BatchDescriptor"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.forward_context.DPMetadata"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.forward_context.ForwardContext"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context.UBatchSlices"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context._compute_chunked_local_num_tokens"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context._compute_sp_num_tokens"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context._forward_context"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context.batchsize_forward_time"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context.batchsize_logging_interval"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context.coordinate_batch_across_dp"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context.create_forward_context"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context.current_platform"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context.forward_start_time"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context.get_forward_context"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context.init_logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context.is_forward_context_available"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context.last_logging_time"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context.logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context.override_forward_context"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.forward_context.set_forward_context"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.forward_context.track_batchsize"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.grpc.__all__"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.DataPrompt"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.inputs.DecoderOnlyInputs"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.EmbedsInputs"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.EmbedsPrompt"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.EncoderDecoderInputs"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.ExplicitEncoderDecoderPrompt"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.inputs.ProcessorInputs"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.inputs.PromptType"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.inputs.SingletonInputs"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.inputs.SingletonPrompt"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.TextPrompt"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.TokenInputs"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.TokensPrompt"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.inputs.__all__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.inputs.build_explicit_enc_dec_prompt"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.inputs.embeds_inputs"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.inputs.to_enc_dec_tuple_list"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.inputs.token_inputs"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.inputs.zip_enc_dec_prompts"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logger.ColoredFormatter"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logger.DEFAULT_LOGGING_CONFIG"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logger.LogScope"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logger.NewLineFormatter"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logger._DATE_FORMAT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logger._FORMAT"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logger._METHODS_TO_PATCH"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logger._VllmLogger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger._configure_vllm_root_logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger._print_debug_once"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger._print_info_once"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger._print_warning_once"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger._should_log_with_scope"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger._trace_calls"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger._use_color"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger.current_formatter_type"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger.enable_trace_function_call"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger.init_logger"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logger.logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logger.suppress_logging"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logging_utils.ColoredFormatter"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logging_utils.NewLineFormatter"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logging_utils.__all__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logging_utils.logtime"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logits_process.LogitsProcessor"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logits_process.NoBadWordsLogitsProcessor"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logits_process.TokenizerLike"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logits_process.get_bad_words_logits_processors"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logprobs.FlatLogprobs"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.logprobs.Logprob"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logprobs.LogprobsOnePosition"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logprobs.PromptLogprobs"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.logprobs.SampleLogprobs"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logprobs.append_logprobs_for_next_position"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logprobs.create_prompt_logprobs"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.logprobs.create_sample_logprobs"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.model_executor.BasevLLMParameter"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.model_executor.PackedvLLMParameter"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.model_executor.__all__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.model_inspection._format_index_ranges"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.model_inspection._format_module_tree"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.model_inspection._get_child_signature"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.model_inspection._get_module_info"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.model_inspection.format_model_inspection"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.BatchedTensorInputs"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.MULTIMODAL_REGISTRY"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.ModalityData"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.MultiModalDataBuiltins"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.MultiModalDataDict"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.MultiModalHasher"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.MultiModalKwargsItems"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.MultiModalPlaceholderDict"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.MultiModalRegistry"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.MultiModalUUIDDict"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.NestedTensors"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.__all__"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.inputs.MultiModalDataDict"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalFieldConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalFieldElem"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalInputs"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalKwargsItem"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalKwargsItems"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.inputs.NestedTensors"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.PlaceholderRange"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.ClassificationOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.ClassificationRequestOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.CompletionOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.EmbeddingOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.EmbeddingRequestOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.PoolingOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.PoolingRequestOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.RequestOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.RequestStateStats"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.outputs.STREAM_FINISHED"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.ScoringOutput"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.outputs.ScoringRequestOutput"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.outputs._O"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.outputs.logger"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.platforms.CpuArchEnum"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.platforms.PLATFORM_PLUGINS_GROUP"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.platforms.Platform"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.platforms.PlatformEnum"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.platforms.__all__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.__getattr__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.__setattr__"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.platforms._current_platform"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.platforms._init_trace"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.platforms.builtin_platform_plugins"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.cpu_platform_plugin"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.cuda_platform_plugin"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.platforms.current_platform"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.load_plugins_by_group"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.platforms.logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.resolve_current_platform_cls_qualname"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.resolve_obj_by_qualname"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.rocm_platform_plugin"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.supports_xccl"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.tpu_platform_plugin"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.vllm_version_matches_substr"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.platforms.xpu_platform_plugin"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.plugins.DEFAULT_PLUGINS_GROUP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.plugins.IO_PROCESSOR_PLUGINS_GROUP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.plugins.PLATFORM_PLUGINS_GROUP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.plugins.STAT_LOGGER_PLUGINS_GROUP"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.plugins.load_general_plugins"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.plugins.load_plugins_by_group"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.plugins.logger"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.plugins.plugins_loaded"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.pooling_params.PoolingParams"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.pooling_params.PoolingTask"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.pooling_params.RequestOutputKind"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.reasoning.ReasoningParser"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.reasoning.ReasoningParserManager"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.reasoning._REASONING_PARSERS_TO_REGISTER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.reasoning.__all__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.reasoning.register_lazy_reasoning_parsers"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.renderers.RendererLike"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.renderers.RendererRegistry"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.renderers.__all__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.renderers.renderer_from_config"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sampling_params.BeamSearchParams"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sampling_params.PydanticMsgspecMixin"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sampling_params.RequestOutputKind"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sampling_params.SamplingParams"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sampling_params.SamplingType"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sampling_params.StructuredOutputsParams"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sampling_params.TokenizerLike"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.sampling_params._MAX_TEMP"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.sampling_params._SAMPLING_EPS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.sampling_params.logger"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.scalar_type.NanRepr"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.scalar_type.ScalarType"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.scalar_type._SCALAR_TYPES_ID_MAP"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.scalar_type.scalar_types"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.scripts.logger"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.scripts.main"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sequence.IntermediateTensors"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.sequence.KVConnectorOutput"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tasks.GENERATION_TASKS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tasks.GenerationTask"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tasks.POOLING_TASKS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tasks.PoolingTask"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tasks.SupportedTask"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.tokenizers.TokenizerLike"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tokenizers.TokenizerRegistry"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tokenizers.__all__"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tokenizers.cached_get_tokenizer"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tokenizers.cached_tokenizer_from_config"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tokenizers.get_tokenizer"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.tool_parsers.ToolParser"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.tool_parsers.ToolParserManager"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tool_parsers._TOOL_PARSERS_TO_REGISTER"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tool_parsers.__all__"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tool_parsers.register_lazy_tool_parsers"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.tracing.BaseSpanAttributes"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.tracing.SpanAttributes"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tracing.TRACE_HEADERS"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tracing._is_otel_imported"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tracing.contains_trace_headers"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tracing.extract_trace_context"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tracing.extract_trace_headers"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tracing.get_span_exporter"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tracing.init_tracer"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tracing.is_otel_available"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tracing.log_tracing_disabled_warning"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tracing.logger"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.tracing.otel_import_error_traceback"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.tracing.run_once"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.triton_utils.HAS_TRITON"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.triton_utils.TritonLanguagePlaceholder"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.triton_utils.TritonPlaceholder"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.triton_utils.__all__"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.utils.MASK_64_BITS"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.utils.length_from_prompt_token_ids_or_embeds"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.utils.random_uuid"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.version._prev_minor_version"
+        },
+        {
+          "kind": "function",
+          "name": "vllm.version._prev_minor_version_was"
+        }
+      ]
+    },
+    "summary": {
+      "modules": [
+        "vllm",
+        "vllm.config",
+        "vllm.inputs",
+        "vllm.model_executor.models.adapters",
+        "vllm.model_executor.models.interfaces",
+        "vllm.model_executor.models.interfaces_base",
+        "vllm.multimodal",
+        "vllm.multimodal.inputs",
+        "vllm.multimodal.parse",
+        "vllm.multimodal.processing",
+        "vllm.multimodal.registry"
+      ],
+      "objects": [
+        {
+          "kind": "data",
+          "name": "vllm.AsyncLLMEngine"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.LLM"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.LLMEngine"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.PoolingParams"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.SamplingParams"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.CacheConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.CompilationConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.DeviceConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.KVTransferConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.LoRAConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.LoadConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ModelConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.MultiModalConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ObservabilityConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ParallelConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.PoolerConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.ProfilerConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.SchedulerConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.SpeculativeConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.StructuredOutputsConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.config.VllmConfig"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.inputs.PromptType"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.TextPrompt"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.inputs.TokensPrompt"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.MULTIMODAL_REGISTRY"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.inputs.MultiModalDataDict"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalFieldConfig"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalFieldElem"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalInputs"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalKwargsItem"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.MultiModalKwargsItems"
+        },
+        {
+          "kind": "data",
+          "name": "vllm.multimodal.inputs.NestedTensors"
+        },
+        {
+          "kind": "class",
+          "name": "vllm.multimodal.inputs.PlaceholderRange"
+        }
+      ]
+    }
+  },
+  "version": 1
+}

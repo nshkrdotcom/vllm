@@ -73,8 +73,17 @@ The foundational VLLM example showing core concepts:
 - Processing results
 
 ```elixir
-llm = VLLM.llm!("facebook/opt-125m")
-outputs = VLLM.generate!(llm, ["Hello, my name is"])
+{:ok, llm} = Vllm.LLM.new("facebook/opt-125m")
+llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+runtime_opts =
+  case llm_ref.pool_name do
+    nil -> [session_id: llm_ref.session_id]
+    pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+  end
+
+{:ok, outputs} =
+  Vllm.LLM.generate(llm, ["Hello, my name is"], [], __runtime__: runtime_opts)
 ```
 
 **Run:** `mix run examples/basic.exs`
@@ -91,8 +100,19 @@ Control text generation behavior:
 - Multiple completions
 
 ```elixir
-params = VLLM.sampling_params!(temperature: 0.8, top_p: 0.95, max_tokens: 100)
-outputs = VLLM.generate!(llm, prompt, sampling_params: params)
+llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+runtime_opts =
+  case llm_ref.pool_name do
+    nil -> [session_id: llm_ref.session_id]
+    pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+  end
+
+{:ok, params} =
+  Vllm.SamplingParams.new([], temperature: 0.8, top_p: 0.95, max_tokens: 100, __runtime__: runtime_opts)
+
+{:ok, outputs} =
+  Vllm.LLM.generate(llm, [prompt], [], sampling_params: params, __runtime__: runtime_opts)
 ```
 
 **Run:** `mix run examples/sampling_params.exs`
@@ -107,11 +127,20 @@ Chat-style interactions with instruction-tuned models:
 - Batch chat processing
 
 ```elixir
+llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+runtime_opts =
+  case llm_ref.pool_name do
+    nil -> [session_id: llm_ref.session_id]
+    pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+  end
+
 messages = [[
   %{"role" => "system", "content" => "You are helpful."},
   %{"role" => "user", "content" => "Hello!"}
 ]]
-outputs = VLLM.chat!(llm, messages)
+
+{:ok, outputs} = Vllm.LLM.chat(llm, messages, [], __runtime__: runtime_opts)
 ```
 
 **Run:** `mix run examples/chat.exs`
@@ -126,8 +155,16 @@ High-throughput batch processing:
 - Performance measurement
 
 ```elixir
+llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+runtime_opts =
+  case llm_ref.pool_name do
+    nil -> [session_id: llm_ref.session_id]
+    pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+  end
+
 prompts = ["Prompt 1", "Prompt 2", "Prompt 3", ...]
-outputs = VLLM.generate!(llm, prompts, sampling_params: params)
+{:ok, outputs} = Vllm.LLM.generate(llm, prompts, [], sampling_params: params, __runtime__: runtime_opts)
 ```
 
 **Run:** `mix run examples/batch_inference.exs`
@@ -144,7 +181,7 @@ Guided generation for structured outputs:
 - Choice constraints
 
 ```elixir
-guided = VLLM.guided_decoding_params!(choice: ["yes", "no", "maybe"])
+{:ok, params} = Vllm.SamplingParams.new([], structured_outputs: %{choice: ["yes", "no", "maybe"]})
 ```
 
 **Run:** `mix run examples/structured_output.exs`
@@ -159,7 +196,7 @@ Memory-efficient inference with quantized models:
 - Memory comparison
 
 ```elixir
-llm = VLLM.llm!("TheBloke/Llama-2-7B-AWQ", quantization: "awq")
+{:ok, llm} = Vllm.LLM.new("TheBloke/Llama-2-7B-AWQ", quantization: "awq")
 ```
 
 **Run:** `mix run examples/quantization.exs`
@@ -174,7 +211,7 @@ Distributed inference across GPUs:
 - Memory utilization
 
 ```elixir
-llm = VLLM.llm!("meta-llama/Llama-2-13b-hf",
+{:ok, llm} = Vllm.LLM.new("meta-llama/Llama-2-13b-hf",
   tensor_parallel_size: 2,
   gpu_memory_utilization: 0.9
 )
@@ -192,8 +229,16 @@ Vector embeddings for semantic search:
 - Use cases
 
 ```elixir
-llm = VLLM.llm!("intfloat/e5-mistral-7b-instruct", runner: "pooling")
-outputs = VLLM.embed!(llm, ["Hello, world!"])
+{:ok, llm} = Vllm.LLM.new("intfloat/e5-mistral-7b-instruct", runner: "pooling")
+llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+runtime_opts =
+  case llm_ref.pool_name do
+    nil -> [session_id: llm_ref.session_id]
+    pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+  end
+
+{:ok, outputs} = Vllm.LLM.embed(llm, ["Hello, world!"], __runtime__: runtime_opts)
 ```
 
 **Run:** `mix run examples/embeddings.exs`
@@ -208,9 +253,19 @@ Fine-tuned model serving:
 - Configuration
 
 ```elixir
-llm = VLLM.llm!("meta-llama/Llama-2-7b-hf", enable_lora: true)
-lora = VLLM.lora_request!("my-adapter", 1, "/path/to/adapter")
-outputs = VLLM.generate!(llm, prompt, lora_request: lora)
+{:ok, llm} = Vllm.LLM.new("meta-llama/Llama-2-7b-hf", enable_lora: true)
+llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+runtime_opts =
+  case llm_ref.pool_name do
+    nil -> [session_id: llm_ref.session_id]
+    pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+  end
+
+{:ok, lora} =
+  Vllm.BeamSearch.LoRARequest.new(["my-adapter", 1, "/path/to/adapter"], __runtime__: runtime_opts)
+
+{:ok, outputs} = Vllm.LLM.generate(llm, [prompt], [], lora_request: lora, __runtime__: runtime_opts)
 ```
 
 **Run:** `mix run examples/lora.exs`
@@ -225,24 +280,44 @@ Configure timeouts for long-running operations:
 - Helper functions
 
 ```elixir
-opts = VLLM.with_timeout([sampling_params: params], timeout_profile: :batch_job)
-outputs = VLLM.generate!(llm, prompts, opts)
+llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+runtime_opts =
+  case llm_ref.pool_name do
+    nil -> [session_id: llm_ref.session_id]
+    pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+  end
+
+{:ok, outputs} =
+  Vllm.LLM.generate(llm, prompts, [],
+    sampling_params: params,
+    __runtime__: Keyword.merge(runtime_opts, timeout_profile: :batch_job)
+  )
 ```
 
 **Run:** `mix run examples/timeout_config.exs`
 
 ---
 
-### Direct API (`direct_api.exs`)
+### Wrapper API (`direct_api.exs`)
 
-Universal FFI for advanced usage:
-- Direct Python calls
-- Object methods and attributes
-- Error handling
+Demonstrates wrapper-only usage:
+
+1. **Generated wrappers** (type-safe): `Vllm.LLM.new/2`, `Vllm.SamplingParams.new/2`
+2. **Runtime attribute access** for Python refs via `SnakeBridge.Runtime.get_attr/2`
 
 ```elixir
-version = VLLM.get!("vllm", "__version__")
-result = VLLM.call!("vllm", "SamplingParams", [], temperature: 0.8)
+{:ok, llm} = Vllm.LLM.new("facebook/opt-125m")
+llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+runtime_opts =
+  case llm_ref.pool_name do
+    nil -> [session_id: llm_ref.session_id]
+    pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+  end
+
+{:ok, params} = Vllm.SamplingParams.new([], temperature: 0.8, __runtime__: runtime_opts)
+{:ok, outputs} = Vllm.LLM.generate(llm, ["Hello"], [], sampling_params: params, __runtime__: runtime_opts)
 ```
 
 **Run:** `mix run examples/direct_api.exs`
@@ -282,7 +357,7 @@ VLLM_RUN_TIMEOUT_SECONDS=0 ./examples/run_all.sh
 | `embeddings.exs` | Advanced | Vector embeddings |
 | `lora.exs` | Advanced | Fine-tuned adapters |
 | `timeout_config.exs` | Configuration | Timeout settings |
-| `direct_api.exs` | Advanced | Raw Python access |
+| `direct_api.exs` | Advanced | Wrapper-only API usage |
 
 ## Troubleshooting
 
@@ -317,8 +392,8 @@ Model not found
 ### Timeout Errors
 For long operations, increase timeout:
 ```elixir
-VLLM.generate!(llm, prompts,
-  __runtime__: [timeout_profile: :batch_job]
+Vllm.LLM.generate(llm, prompts, [],
+  __runtime__: Keyword.merge(runtime_opts, timeout_profile: :batch_job)
 )
 ```
 

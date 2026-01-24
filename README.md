@@ -75,7 +75,7 @@ Add `vllm` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:vllm, "~> 0.1.1"}
+    {:vllm, "~> 0.2.0"}
   ]
 end
 ```
@@ -86,6 +86,14 @@ Then fetch dependencies and set up Python:
 mix deps.get
 mix snakebridge.setup
 ```
+
+To refresh generated wrappers after updating SnakeBridge or the docs manifest:
+
+```bash
+mix snakebridge.regen
+```
+
+Add `--clean` to remove generated artifacts and metadata before regenerating.
 
 ## Quick Start
 

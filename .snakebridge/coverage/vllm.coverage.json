@@ -1,0 +1,2935 @@
+{
+  "generated_at": "2026-01-26T03:27:02.781860Z",
+  "issues": [
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.modality_data",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.extract_trace_context",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_conda_packages",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.is_otel_available",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext._compute_chunked_local_num_tokens",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.cpu_platform_plugin",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_nvidia_smi",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.current_platform",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext._compute_sp_num_tokens",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.__getattr__",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.patched_fused_scaled_matmul_reduce_scatter",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.all_gather_fake",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.EnvOverride.memory_plan_reuse_patched",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.extract_trace_headers",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.str_dtype_to_torch_dtype",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.__dir__",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_dcp_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Inputs.to_enc_dec_tuple_list",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.pretty_str",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_cuda_module_loading_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_cachingallocator_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Inputs.build_explicit_enc_dec_prompt",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.is_forward_context_available",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_ep_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tasks.supported_task",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.tpu_platform_plugin",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_mac_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.xpu_platform_plugin",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_vllm_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_context_model_parallel_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.get_span_exporter",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.broadcast_tensor_dict",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_libc_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.create_forward_context",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.is_xnnpack_available",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.init_world_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.init_distributed_environment",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.nested_tensors",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_env_vars",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.set_custom_all_reduce",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_windows_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.get_default_cache_root",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_platform",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_gpu_info",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_lsb_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_pcp_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.summarize_vllm_build_flags",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_pretty_env_info",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Plugins.load_plugins_by_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.all_reduce_fake",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_pp_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.contains_trace_headers",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.iter_architecture_defaults",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.cached_tokenizer_from_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.BeamSearch.create_sort_beams_key_function",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_env_info",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.get_current_vllm_config_or_none",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.resolve_current_platform_cls_qualname",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.init_model_parallel_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.check_release_file",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_cmake_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_nvidia_driver_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.load_plugins_by_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.update_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.maybe_convert_int",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_world_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.use_aot_compile",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tasks.generation_task",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_python_platform",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.sched_yield",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_os",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.get_current_vllm_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.main",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.all_reduce",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.run_once",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.init_tracer",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ToolParsers.register_lazy_tool_parsers",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.reduce_scatter_fake",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Utils.random_uuid",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.is_uv_venv",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_tcp_uri",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tasks.pooling_task",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.get_bad_words_logits_processors",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.is_init_field",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.cuda_platform_plugin",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.rocm_platform_plugin",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_gcc_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_cpu_info",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Reasoning.register_lazy_reasoning_parsers",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.cleanup_dist_env_and_memory",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_distributed_init_method",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_clang_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.PoolingParams.pooling_task",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_dp_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.current_platform",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.patched_fused_scaled_matmul_reduce_scatter_fake",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.supports_xccl",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.get_default_config_root",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_running_cuda_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.get_gpu_topo",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.destroy_distributed_environment",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.__setattr__",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.nested_tensors",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.try_match_architecture_defaults",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.all_gather",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.disable_compile_cache",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.log_tracing_disabled_warning",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_tp_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.reduce_scatter",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.maybe_convert_bool",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Scripts.main",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.get_inner_dp_world_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SpeechToTextConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ObservabilityConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ObservabilityConfig._validate_otlp_traces_endpoint",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ObservabilityConfig._validate_show_hidden_metrics_for_version",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ObservabilityConfig._validate_tracing_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.LoadConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.LoadConfig._lowercase_load_format",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.LoadConfig._validate_ignore_patterns",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.device_id_to_physical_device_id",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.get_max_output_tokens",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.get_supported_vit_attn_backends",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.is_cpu",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.is_cuda",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.is_out_of_tree",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.is_rocm",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.is_sleep_mode_available",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.is_tpu",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.is_unspecified",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.Platform.is_xpu",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.PoolingParamsClass._merge_default_parameters",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.PoolingParamsClass._set_default_parameters",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.PoolingParamsClass._verify_step_pooling",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.PoolingParamsClass._verify_valid_parameters",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.PoolingParamsClass.verify",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.LoggingUtils.ColoredFormatter.converter",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LoggingUtils.ColoredFormatter.format_message",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ECTransferConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ECTransferConfig.get_from_extra_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.VllmConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.VllmConfig.get_quantization_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.VllmConfig.pad_for_cudagraph",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.VllmConfig.try_verify_and_update_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.VllmConfig.update_sizes_for_sequence_parallelism",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.VllmConfig.validate_mamba_block_size",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.VllmConfig.with_hf_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CacheConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CacheConfig._validate_cache_dtype",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CacheConfig.metrics_info",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CacheConfig.verify_with_parallel_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.PackedvLLMParameter.adjust_shard_indexes_for_packing",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.EPLBConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.EPLBConfig._validate_eplb_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItem.copy",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItem.from_elems",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItem.fromkeys",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItem.get_data",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.MultiModalConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.MultiModalConfig._validate_limit_per_prompt",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.MultiModalConfig._validate_mm_encoder_attn_backend",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.MultiModalConfig._validate_multimodal_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.MultiModalConfig.is_multimodal_pruning_enabled",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TextPrompt.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TextPrompt.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TextPrompt.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TextPrompt.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TextPrompt.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TextPrompt.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TextPrompt.values",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.NoBadWordsLogitsProcessor._check_token_ids_bounds",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.NoBadWordsLogitsProcessor._init_word_bias",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Config.CompilationMode.conjugate",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SupportsMetricsInfo.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SupportsMetricsInfo.metrics_info",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokenInputs.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokenInputs.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokenInputs.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokenInputs.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokenInputs.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokenInputs.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokenInputs.values",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.LoRAConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.LoRAConfig._validate_lora_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.LoRAConfig.verify_with_model_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs.ClassificationRequestOutput.from_base",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ScalarType._floating_point_max",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ScalarType._floating_point_max_int",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ScalarType._raw_max",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ScalarType._raw_min",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ScalarType.from_id",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ScalarType.has_nans",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs.CompletionOutput.finished",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.BasevLLMParameter._assert_and_load",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.BasevLLMParameter._is_1d_and_scalar",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.BasevLLMParameter._shard_id_as_int",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.BasevLLMParameter.load_column_parallel_weight",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.BasevLLMParameter.load_merged_column_weight",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.BasevLLMParameter.load_qkv_weight",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.BasevLLMParameter.load_row_parallel_weight",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalInputs.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalInputs.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalInputs.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalInputs.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalInputs.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalInputs.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalInputs.values",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.PoolerConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.PoolerConfig.get_seq_pooling_type",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.PoolerConfig.get_tok_pooling_type",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EncoderDecoderInputs.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EncoderDecoderInputs.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EncoderDecoderInputs.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EncoderDecoderInputs.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EncoderDecoderInputs.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EncoderDecoderInputs.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EncoderDecoderInputs.values",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.DataPrompt.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.DataPrompt.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.DataPrompt.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.DataPrompt.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.DataPrompt.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.DataPrompt.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.DataPrompt.values",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalKwargsItems.copy",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalKwargsItems.from_hf_inputs",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalKwargsItems.from_seq",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalKwargsItems.fromkeys",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalKwargsItems.require_data",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.KVEventsConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.DeviceCommunicatorBase.all_gather",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.DeviceCommunicatorBase.all_gatherv",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.DeviceCommunicatorBase.all_reduce",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.DeviceCommunicatorBase.destroy",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.DeviceCommunicatorBase.reduce_scatter",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.DeviceCommunicatorBase.reduce_scatterv",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsPrompt.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsPrompt.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsPrompt.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsPrompt.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsPrompt.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsPrompt.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsPrompt.values",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.StructuredOutputsConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.StructuredOutputsConfig._validate_structured_output_config",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsInputs.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsInputs.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsInputs.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsInputs.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsInputs.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsInputs.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.EmbedsInputs.values",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs.EmbeddingRequestOutput.from_base",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.MultiModalDataBuiltins.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.MultiModalDataBuiltins.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.MultiModalDataBuiltins.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.MultiModalDataBuiltins.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.MultiModalDataBuiltins.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.MultiModalDataBuiltins.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Multimodal.MultiModalDataBuiltins.values",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalFieldConfig.build_elems",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs.ScoringOutput.from_base",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Exceptions.VLLMValidationError.add_note",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Exceptions.VLLMValidationError.with_traceback",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs.EmbeddingOutput.from_base",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.PassConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.PassConfig.default_fi_allreduce_fusion_max_size_mb",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection._headers",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection._validate_http_url",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.async_download_file",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.async_get_bytes",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.async_get_json",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.async_get_text",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.download_file",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.get_async_client",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.get_async_response",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.get_bytes",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.get_json",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.get_response",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.get_sync_client",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.HTTPConnection.get_text",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ParallelConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ParallelConfig._validate_parallel_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ParallelConfig._verify_args",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ParallelConfig.has_unfinished_dp",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ParallelConfig.stateless_init_dp_group",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ParallelConfig.sync_kv_cache_memory_size",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.TritonUtils.TritonPlaceholder._dummy_decorator",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.AttentionConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.SamplingParams.SamplingType.conjugate",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.DPMetadata.cu_tokens_across_sp",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.DPMetadata.get_chunk_sizes_across_dp_rank",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.DPMetadata.make",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SpeculativeConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SpeculativeConfig._validate_suffix_decoding",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SpeculativeConfig._verify_args",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SpeculativeConfig.hf_config_override",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SpeculativeConfig.use_eagle",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokensPrompt.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokensPrompt.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokensPrompt.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokensPrompt.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokensPrompt.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokensPrompt.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.TokensPrompt.values",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.LoggingUtils.NewLineFormatter.converter",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LoggingUtils.NewLineFormatter.format_message",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator._all_gather_out_place",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator._all_reduce_out_place",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator._reduce_scatter_out_place",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.all_gather",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.all_gatherv",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.combine",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.create_mq_broadcaster",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.create_single_reader_mq_broadcasters",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.destroy",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.dispatch",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.graph_capture",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.prepare_communication_buffer_for_model",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.reduce_scatter",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.GroupCoordinator.reduce_scatterv",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalHasher.hash_kwargs",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalHasher.iter_item_to_bytes",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalHasher.serialize_item",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs.ClassificationOutput.from_base",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs.ScoringRequestOutput.from_base",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.apply_chat_template",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.convert_ids_to_tokens",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.convert_tokens_to_ids",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.convert_tokens_to_string",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.decode",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.encode",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.from_pretrained",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.get_added_vocab",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.get_vocab",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.TokenizerLike.num_special_tokens_to_add",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.adjust_cudagraph_sizes_for_spec_decode",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.compute_bs_to_padded_graph_size",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.is_attention_compiled_piecewise",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.is_custom_op_enabled",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.set_splitting_ops_for_attn_fusion",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.set_splitting_ops_for_v1",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.splitting_ops_contain_attention",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.CompilationConfig.validate_compile_cache_save_format",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.DeviceConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.ExplicitEncoderDecoderPrompt.clear",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.ExplicitEncoderDecoderPrompt.copy",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.ExplicitEncoderDecoderPrompt.items",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.ExplicitEncoderDecoderPrompt.keys",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.ExplicitEncoderDecoderPrompt.pop",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.ExplicitEncoderDecoderPrompt.update",
+      "source": "variadic"
+    },
+    {
+      "reason": [
+        "runtime: signature unavailable",
+        "text_signature: unavailable",
+        "runtime_hints: unavailable",
+        "stub: not found",
+        "stubgen: not found"
+      ],
+      "type": "signature_missing",
+      "symbol": "Vllm.Inputs.ExplicitEncoderDecoderPrompt.values",
+      "source": "variadic"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ProfilerConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ProfilerConfig._validate_profiler_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._get_convert_type",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._get_default_convert_type",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._get_default_runner_type",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._get_encoder_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._get_runner_type",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._lowercase_tokenizer_mode",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._try_verify_and_update_model_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._verify_cuda_graph",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._verify_quantization",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig._verify_with_expert_parallelism",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_and_verify_max_len",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_head_size",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_hidden_size",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_inputs_embeds_size",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_layers_start_end_indices",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_model_arch_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_num_attention_heads",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_num_experts",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_num_layers",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_num_layers_by_block_type",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_total_num_hidden_layers",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.get_vocab_size",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.validate_quantization_before",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.verify_dual_chunk_attention_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.ModelConfig.verify_with_parallel_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItems.copy",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItems.from_hf_inputs",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItems.from_seq",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItems.fromkeys",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.Inputs.MultiModalKwargsItems.require_data",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalRegistry._create_processing_ctx",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalRegistry._create_processing_info",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.MultiModalRegistry._get_model_cls",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SchedulerConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SchedulerConfig.get_scheduler_cls",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.SchedulerConfig.verify_max_model_len",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.KVTransferConfig.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.KVTransferConfig.get_from_extra_config",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.new",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.apply_chat_template",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.convert_ids_to_tokens",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.convert_tokens_to_ids",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.convert_tokens_to_string",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.decode",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.encode",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.from_pretrained",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.get_added_vocab",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.get_vocab",
+      "source": "empty"
+    },
+    {
+      "reason": "docstring missing",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.TokenizerLike.num_special_tokens_to_add",
+      "source": "empty"
+    },
+    {
+      "reason": {
+        "message": "Package 'vllm.renderers' not found",
+        "package": "vllm.renderers",
+        "python_error": "Failed to import module 'vllm.renderers': No module named 'vllm.renderers'",
+        "suggestion": "Run: mix snakebridge.setup",
+        "type": "package_not_found"
+      },
+      "type": "introspection_error",
+      "library": "vllm",
+      "python_module": "vllm.renderers"
+    }
+  ],
+  "library": "vllm",
+  "stubs": {
+    "count": 1,
+    "sources": [
+      "variadic"
+    ]
+  },
+  "summary": {
+    "class_methods": 839,
+    "doc_coverage_ratio": 0.7557364914877869,
+    "doc_tiers": {
+      "empty": 330,
+      "module": 72,
+      "runtime": 891,
+      "stub": 58
+    },
+    "functions": 512,
+    "non_variadic_ratio": 0.9437453737971873,
+    "signature_tiers": {
+      "runtime": 1180,
+      "runtime_hints": 37,
+      "stub": 58,
+      "variadic": 76
+    },
+    "symbols_total": 1351
+  }
+}
