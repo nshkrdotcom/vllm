@@ -1,7 +1,7 @@
 defmodule VLLM.MixProject do
   use Mix.Project
 
-  @version "0.1.1"
+  @version "0.2.0"
   @source_url "https://github.com/nshkrdotcom/vllm"
 
   def project do
@@ -13,8 +13,13 @@ defmodule VLLM.MixProject do
       deps: deps(),
       python_deps: python_deps(),
       elixirc_paths: elixirc_paths(Mix.env()),
+      preferred_cli_env: [
+        dialyzer: :dialyzer,
+        "dialyzer.clean": :dialyzer,
+        "dialyzer.plt": :dialyzer
+      ],
       # Add snakebridge compiler for Python introspection and auto-install
-      compilers: [:snakebridge] ++ Mix.compilers(),
+      compilers: compilers(Mix.env()),
 
       # Dialyzer
       dialyzer: [
@@ -41,26 +46,35 @@ defmodule VLLM.MixProject do
   defp deps do
     [
       # SnakeBridge - Python bridge for vLLM
-      {:snakebridge, "~> 0.8.1"},
+      {:snakebridge, "~> 0.15.0"},
 
       # JSON encoding
       {:jason, "~> 1.4"},
 
       # Dev/test tools
-      {:ex_doc, "~> 0.31", only: :dev, runtime: false},
-      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.40", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.4", only: [:dev, :test, :dialyzer], runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 
   defp python_deps do
     [
-      {:vllm, "0.13.0"}
+      # Generate vLLM's *documented* public surface from a committed docs manifest.
+      {:vllm, "0.14.0",
+       generate: :all,
+       module_mode: :docs,
+       docs_manifest: "priv/snakebridge/vllm.docs.json",
+       docs_profile: :full,
+       max_class_methods: 500}
     ]
   end
 
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_), do: ["lib"]
+  defp elixirc_paths(:test), do: ["lib/vllm", "lib/snakebridge_generated", "test/support"]
+  defp elixirc_paths(_), do: ["lib/vllm", "lib/snakebridge_generated"]
+
+  defp compilers(:dialyzer), do: Mix.compilers()
+  defp compilers(_), do: [:snakebridge] ++ Mix.compilers()
 
   defp description do
     """
@@ -165,9 +179,7 @@ defmodule VLLM.MixProject do
       licenses: ["MIT"],
       links: %{
         "GitHub" => @source_url,
-        "Documentation" => "https://hexdocs.pm/vllm",
-        "vLLM Python" => "https://github.com/vllm-project/vllm",
-        "Changelog" => "#{@source_url}/blob/main/CHANGELOG.md"
+        "vLLM Python" => "https://github.com/vllm-project/vllm"
       },
       maintainers: ["nshkrdotcom"],
       exclude_patterns: [

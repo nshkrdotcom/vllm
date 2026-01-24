@@ -26,3 +26,7 @@ vllm_python_source/
 /priv/plts/
 /examples/assets/
 /priv/snakebridge/registry.json
+/priv/python/requirements.txt
+
+# SnakeBridge generated manifest (large, regenerated on build)
+.snakebridge/manifest.json

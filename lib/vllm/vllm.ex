@@ -3,7 +3,7 @@ defmodule VLLM do
   VLLM - vLLM for Elixir via SnakeBridge.
 
   Easy, fast, and cheap LLM serving for everyone. This library provides
-  transparent access to Python vLLM through SnakeBridge's Universal FFI.
+  transparent access to Python vLLM through SnakeBridge's generated wrappers.
 
   ## Quick Start
 
@@ -49,6 +49,16 @@ defmodule VLLM do
         outputs = VLLM.generate!(llm, ["Once upon a time"], sampling_params: params)
       end)
 
+  ## Generated Wrappers
+
+  This library uses SnakeBridge's generated wrappers for type-safe bindings:
+
+    * `Vllm.LLM` - Main inference class
+    * `Vllm.SamplingParams` - Generation parameters
+    * `Vllm.PoolingParams` - Embedding parameters
+    * `Vllm.LLMEngine` - Low-level engine
+    * `Vllm.AsyncLLMEngine` - Async engine for serving
+
   ## Timeout Configuration
 
   VLLM leverages SnakeBridge's timeout architecture for LLM workloads.
@@ -72,11 +82,13 @@ defmodule VLLM do
 
   ## Architecture
 
-  VLLM uses SnakeBridge's Universal FFI to call vLLM directly:
+  VLLM uses SnakeBridge's generated wrappers to call vLLM:
 
-      Elixir (VLLM.call/4)
+      Elixir (VLLM module)
           |
-      SnakeBridge.call/4
+      Generated Wrappers (Vllm.LLM, etc.)
+          |
+      SnakeBridge.Runtime
           |
       Snakepit gRPC
           |
@@ -115,11 +127,13 @@ defmodule VLLM do
   end
 
   # ---------------------------------------------------------------------------
-  # Core LLM API
+  # Core LLM API (delegating to generated wrappers)
   # ---------------------------------------------------------------------------
 
   @doc """
   Create a vLLM LLM instance for offline inference.
+
+  Delegates to `Vllm.LLM.new/2`.
 
   ## Options
 
@@ -138,16 +152,21 @@ defmodule VLLM do
       {:ok, llm} = VLLM.llm("TheBloke/Llama-2-7B-AWQ", quantization: "awq")
   """
   def llm(model, opts \\ []) do
-    SnakeBridge.call("vllm", "LLM", [model], opts)
+    Vllm.LLM.new(model, opts)
   end
 
   @doc "Bang version of llm/2 - raises on error."
   def llm!(model, opts \\ []) do
-    SnakeBridge.call!("vllm", "LLM", [model], opts)
+    case llm(model, opts) do
+      {:ok, llm} -> llm
+      {:error, error} -> raise RuntimeError, message: "Failed to create LLM: #{inspect(error)}"
+    end
   end
 
   @doc """
   Create SamplingParams for controlling text generation.
+
+  Delegates to `Vllm.SamplingParams.new/2`.
 
   ## Options
 
@@ -171,16 +190,24 @@ defmodule VLLM do
       {:ok, params} = VLLM.sampling_params(top_p: 0.9, stop: ["\\n", "END"])
   """
   def sampling_params(opts \\ []) do
-    SnakeBridge.call("vllm", "SamplingParams", [], opts)
+    Vllm.SamplingParams.new([], opts)
   end
 
   @doc "Bang version of sampling_params/1 - raises on error."
   def sampling_params!(opts \\ []) do
-    SnakeBridge.call!("vllm", "SamplingParams", [], opts)
+    case sampling_params(opts) do
+      {:ok, params} ->
+        params
+
+      {:error, error} ->
+        raise RuntimeError, message: "Failed to create SamplingParams: #{inspect(error)}"
+    end
   end
 
   @doc """
   Generate text completions from prompts.
+
+  Delegates to `Vllm.LLM.generate/4`.
 
   ## Arguments
 
@@ -207,17 +234,21 @@ defmodule VLLM do
   """
   def generate(llm, prompts, opts \\ []) do
     prompts = List.wrap(prompts)
-    SnakeBridge.method(llm, "generate", [prompts], opts)
+    Vllm.LLM.generate(llm, prompts, opts)
   end
 
   @doc "Bang version of generate/3 - raises on error."
   def generate!(llm, prompts, opts \\ []) do
-    prompts = List.wrap(prompts)
-    SnakeBridge.method!(llm, "generate", [prompts], opts)
+    case generate(llm, prompts, opts) do
+      {:ok, outputs} -> outputs
+      {:error, error} -> raise RuntimeError, message: "Generate failed: #{inspect(error)}"
+    end
   end
 
   @doc """
   Generate chat completions from messages.
+
+  Delegates to `Vllm.LLM.chat/4`.
 
   ## Arguments
 
@@ -248,28 +279,36 @@ defmodule VLLM do
   List of RequestOutput objects (same as generate/3).
   """
   def chat(llm, messages, opts \\ []) do
-    SnakeBridge.method(llm, "chat", [messages], opts)
+    Vllm.LLM.chat(llm, messages, opts)
   end
 
   @doc "Bang version of chat/3 - raises on error."
   def chat!(llm, messages, opts \\ []) do
-    SnakeBridge.method!(llm, "chat", [messages], opts)
+    case chat(llm, messages, opts) do
+      {:ok, outputs} -> outputs
+      {:error, error} -> raise RuntimeError, message: "Chat failed: #{inspect(error)}"
+    end
   end
 
   @doc """
   Encode text to token IDs.
+
+  Delegates to `Vllm.LLM.encode/3`.
 
   ## Examples
 
       {:ok, token_ids} = VLLM.encode(llm, "Hello, world!")
   """
   def encode(llm, text, opts \\ []) do
-    SnakeBridge.method(llm, "encode", [text], opts)
+    Vllm.LLM.encode(llm, text, opts)
   end
 
   @doc "Bang version of encode/3."
   def encode!(llm, text, opts \\ []) do
-    SnakeBridge.method!(llm, "encode", [text], opts)
+    case encode(llm, text, opts) do
+      {:ok, result} -> result
+      {:error, error} -> raise RuntimeError, message: "Encode failed: #{inspect(error)}"
+    end
   end
 
   # ---------------------------------------------------------------------------
@@ -282,6 +321,9 @@ defmodule VLLM do
   The LLMEngine provides lower-level access to vLLM's inference capabilities,
   useful for building custom serving solutions.
 
+  Note: LLMEngine has a complex constructor requiring vllm_config and executor_class.
+  This helper creates it from EngineArgs for simpler usage.
+
   ## Options
 
   Same as `llm/2` plus:
@@ -293,12 +335,22 @@ defmodule VLLM do
       {:ok, engine} = VLLM.engine("facebook/opt-125m")
   """
   def engine(model, opts \\ []) do
-    SnakeBridge.call("vllm", "LLMEngine", [model], opts)
+    # LLMEngine.from_engine_args is a class method, use SnakeBridge.call directly
+    # First create EngineArgs, then use from_engine_args
+    with {:ok, engine_args} <- SnakeBridge.call("vllm", "EngineArgs", [model], opts) do
+      SnakeBridge.call("vllm", "LLMEngine.from_engine_args", [engine_args], opts)
+    end
   end
 
   @doc "Bang version of engine/2."
   def engine!(model, opts \\ []) do
-    SnakeBridge.call!("vllm", "LLMEngine", [model], opts)
+    case engine(model, opts) do
+      {:ok, engine} ->
+        engine
+
+      {:error, error} ->
+        raise RuntimeError, message: "Failed to create LLMEngine: #{inspect(error)}"
+    end
   end
 
   @doc """
@@ -311,12 +363,21 @@ defmodule VLLM do
       {:ok, engine} = VLLM.async_engine("facebook/opt-125m")
   """
   def async_engine(model, opts \\ []) do
-    SnakeBridge.call("vllm.engine.async_llm_engine", "AsyncLLMEngine", [model], opts)
+    # AsyncLLMEngine.from_engine_args is a class method, use SnakeBridge.call directly
+    with {:ok, engine_args} <- SnakeBridge.call("vllm", "EngineArgs", [model], opts) do
+      SnakeBridge.call("vllm", "AsyncLLMEngine.from_engine_args", [engine_args], opts)
+    end
   end
 
   @doc "Bang version of async_engine/2."
   def async_engine!(model, opts \\ []) do
-    SnakeBridge.call!("vllm.engine.async_llm_engine", "AsyncLLMEngine", [model], opts)
+    case async_engine(model, opts) do
+      {:ok, engine} ->
+        engine
+
+      {:error, error} ->
+        raise RuntimeError, message: "Failed to create AsyncLLMEngine: #{inspect(error)}"
+    end
   end
 
   # ---------------------------------------------------------------------------
@@ -325,6 +386,8 @@ defmodule VLLM do
 
   @doc """
   Create PoolingParams for embedding models.
+
+  Delegates to `Vllm.PoolingParams.new/2`.
 
   ## Options
 
@@ -335,16 +398,24 @@ defmodule VLLM do
       {:ok, params} = VLLM.pooling_params()
   """
   def pooling_params(opts \\ []) do
-    SnakeBridge.call("vllm", "PoolingParams", [], opts)
+    Vllm.PoolingParams.new([], opts)
   end
 
   @doc "Bang version of pooling_params/1."
   def pooling_params!(opts \\ []) do
-    SnakeBridge.call!("vllm", "PoolingParams", [], opts)
+    case pooling_params(opts) do
+      {:ok, params} ->
+        params
+
+      {:error, error} ->
+        raise RuntimeError, message: "Failed to create PoolingParams: #{inspect(error)}"
+    end
   end
 
   @doc """
   Generate embeddings for texts using a pooling model.
+
+  Delegates to `Vllm.LLM.embed/3`.
 
   ## Arguments
 
@@ -365,13 +436,15 @@ defmodule VLLM do
   """
   def embed(llm, texts, opts \\ []) do
     texts = List.wrap(texts)
-    SnakeBridge.method(llm, "embed", [texts], opts)
+    Vllm.LLM.embed(llm, texts, opts)
   end
 
   @doc "Bang version of embed/3."
   def embed!(llm, texts, opts \\ []) do
-    texts = List.wrap(texts)
-    SnakeBridge.method!(llm, "embed", [texts], opts)
+    case embed(llm, texts, opts) do
+      {:ok, outputs} -> outputs
+      {:error, error} -> raise RuntimeError, message: "Embed failed: #{inspect(error)}"
+    end
   end
 
   # ---------------------------------------------------------------------------

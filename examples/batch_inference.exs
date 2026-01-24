@@ -14,9 +14,23 @@ IO.puts("=== Batch Inference Example ===\n")
 IO.puts("Note: vLLM requires a CUDA-capable GPU.")
 IO.puts("If you see CUDA errors, ensure you have a compatible NVIDIA GPU.\n")
 
-VLLM.run(fn ->
+get_attr = fn ref, attr ->
+  case SnakeBridge.Runtime.get_attr(ref, attr) do
+    {:ok, value} -> value
+    {:error, error} -> raise RuntimeError, message: "Failed to read #{attr}: #{inspect(error)}"
+  end
+end
+
+Snakepit.run_as_script(fn ->
   IO.puts("Loading model...")
-  llm = VLLM.llm!("facebook/opt-125m")
+  {:ok, llm} = Vllm.LLM.new("facebook/opt-125m")
+  llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+  runtime_opts =
+    case llm_ref.pool_name do
+      nil -> [session_id: llm_ref.session_id]
+      pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+    end
 
   # Create a batch of prompts
   prompts = [
@@ -34,11 +48,15 @@ VLLM.run(fn ->
 
   IO.puts("Processing #{length(prompts)} prompts in batch...\n")
 
-  params = VLLM.sampling_params!(temperature: 0.7, max_tokens: 50)
+  {:ok, params} =
+    Vllm.SamplingParams.new([], temperature: 0.7, max_tokens: 50, __runtime__: runtime_opts)
 
   # Measure batch processing time
   start_time = System.monotonic_time(:millisecond)
-  outputs = VLLM.generate!(llm, prompts, sampling_params: params)
+
+  {:ok, outputs} =
+    Vllm.LLM.generate(llm, prompts, [], sampling_params: params, __runtime__: runtime_opts)
+
   end_time = System.monotonic_time(:millisecond)
 
   elapsed_ms = end_time - start_time
@@ -47,9 +65,9 @@ VLLM.run(fn ->
   IO.puts("--- Results ---\n")
 
   Enum.each(outputs, fn output ->
-    prompt = VLLM.attr!(output, "prompt")
-    completion = VLLM.attr!(output, "outputs") |> Enum.at(0)
-    text = VLLM.attr!(completion, "text")
+    prompt = get_attr.(output, :prompt)
+    completion = get_attr.(output, :outputs) |> Enum.at(0)
+    text = get_attr.(completion, :text)
 
     # Truncate for display
     text_preview = String.slice(text, 0, 60)

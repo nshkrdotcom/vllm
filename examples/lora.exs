@@ -11,7 +11,7 @@
 #
 # Default adapter is downloaded automatically on first run.
 
-defmodule VLLM.Examples.LoraHelper do
+defmodule Vllm.Examples.LoraHelper do
   @default_repo "edbeeching/opt-125m-lora"
   @default_base_model "facebook/opt-125m"
   @adapter_files ["adapter_model.safetensors", "adapter_model.bin"]
@@ -138,7 +138,7 @@ IO.puts("Note: vLLM requires a CUDA-capable GPU.\n")
     ]
   )
 
-default_adapter_path = VLLM.Examples.LoraHelper.default_adapter_dir()
+default_adapter_path = Vllm.Examples.LoraHelper.default_adapter_dir()
 adapter_path = opts[:adapter] || default_adapter_path
 
 if adapter_path == "" do
@@ -155,9 +155,9 @@ adapter_dir =
   end
 
 if adapter_path == default_adapter_path do
-  VLLM.Examples.LoraHelper.ensure_adapter!(
+  Vllm.Examples.LoraHelper.ensure_adapter!(
     adapter_dir,
-    VLLM.Examples.LoraHelper.default_repo()
+    Vllm.Examples.LoraHelper.default_repo()
   )
 else
   unless File.exists?(adapter_dir) do
@@ -180,11 +180,11 @@ else
   end
 end
 
-adapter_config = VLLM.Examples.LoraHelper.read_adapter_config(adapter_dir)
+adapter_config = Vllm.Examples.LoraHelper.read_adapter_config(adapter_dir)
 
 model =
   opts[:model] || adapter_config["base_model_name_or_path"] ||
-    VLLM.Examples.LoraHelper.default_base_model()
+    Vllm.Examples.LoraHelper.default_base_model()
 
 if is_nil(model) or model == "" do
   IO.puts("Base model is required for this example.")
@@ -200,25 +200,48 @@ lora_rank = opts[:rank] || adapter_config["r"] || 64
 IO.puts("Loading base model: #{model}")
 IO.puts("Using LoRA adapter: #{adapter_dir}")
 
-VLLM.run(fn ->
-  llm =
-    VLLM.llm!(model,
+Snakepit.run_as_script(fn ->
+  get_attr = fn ref, attr ->
+    case SnakeBridge.Runtime.get_attr(ref, attr) do
+      {:ok, value} -> value
+      {:error, reason} -> raise "Failed to read #{attr}: #{inspect(reason)}"
+    end
+  end
+
+  {:ok, llm} =
+    Vllm.LLM.new(model,
       enable_lora: true,
       max_loras: 1,
       max_lora_rank: lora_rank,
       gpu_memory_utilization: 0.8
     )
 
-  lora = VLLM.lora_request!(lora_name, 1, adapter_dir)
-  params = VLLM.sampling_params!(temperature: 0.7, max_tokens: 80)
+  llm_ref = SnakeBridge.Ref.from_wire_format(llm)
 
-  outputs = VLLM.generate!(llm, lora_prompt, sampling_params: params, lora_request: lora)
+  runtime_opts =
+    case llm_ref.pool_name do
+      nil -> [session_id: llm_ref.session_id]
+      pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+    end
+
+  {:ok, lora} =
+    Vllm.BeamSearch.LoRARequest.new([lora_name, 1, adapter_dir], __runtime__: runtime_opts)
+
+  {:ok, params} =
+    Vllm.SamplingParams.new([], temperature: 0.7, max_tokens: 80, __runtime__: runtime_opts)
+
+  {:ok, outputs} =
+    Vllm.LLM.generate(llm, [lora_prompt], [],
+      sampling_params: params,
+      lora_request: lora,
+      __runtime__: runtime_opts
+    )
 
   output = Enum.at(outputs, 0)
-  completion = VLLM.attr!(output, "outputs") |> Enum.at(0)
+  completion = get_attr.(output, :outputs) |> Enum.at(0)
 
   IO.puts("\nPrompt: #{lora_prompt}")
-  IO.puts("Response: #{VLLM.attr!(completion, "text")}")
+  IO.puts("Response: #{get_attr.(completion, :text)}")
 
   IO.puts("\nLoRA example complete!")
 end)

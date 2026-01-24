@@ -6,8 +6,12 @@ config :snakebridge,
     library_profiles: %{"vllm" => :ml_inference}
   ]
 
+# vLLM v1 multiprocessing spawns subprocesses; enable only when Snakepit can
+# reliably kill the worker process group on shutdown.
+config :vllm, v1_multiprocessing: :auto
+
 # Compile-time snakepit config so SnakeBridge installs into the same venv
-# used at runtime (can't call SnakeBridge.ConfigHelper in config.exs).
+# used at runtime (can't call runtime config helpers in config.exs).
 project_root = Path.expand("..", __DIR__)
 
 snakebridge_venv =
@@ -38,7 +42,7 @@ if python_executable do
 end
 
 # Track current Mix environment for runtime diagnostics
-# Use :ml_inference profile for 15min default timeout (model loading + inference)
+# Use :ml_inference profile for long-running model loading + inference
 config :snakepit,
   environment: config_env(),
   timeout_profile: :ml_inference
@@ -46,6 +50,6 @@ config :snakepit,
 config :logger,
   level: :warning
 
-# Snakepit is configured in runtime.exs using SnakeBridge.ConfigHelper
+# Snakepit is configured in runtime.exs using VLLM.ConfigHelper
 
 import_config "#{config_env()}.exs"

@@ -110,14 +110,43 @@ config :snakepit, environment: config_env()
 config :logger, level: :warning
 ```
 
+### Compile-Time Bindings (SnakeBridge)
+
+VLLM uses SnakeBridge to generate Elixir wrappers for vLLM’s documented public API. In `mix.exs`,
+`python_deps` is configured with `module_mode: :docs` using a committed docs manifest
+(`priv/snakebridge/vllm.docs.json`). This keeps generation deterministic and avoids walking vLLM’s
+deep internal module tree at build time.
+
+Additionally, `max_class_methods` is enabled to prevent inheritance-heavy internal classes from
+producing extremely large generated wrapper modules.
+
 Configure in `config/runtime.exs`:
 
 ```elixir
 import Config
 
-# Auto-configure snakepit
-SnakeBridge.ConfigHelper.configure_snakepit!()
+# Auto-configure Snakepit (and apply vLLM safety defaults)
+VLLM.ConfigHelper.configure_snakepit!()
 ```
+
+### vLLM v1 Multiprocessing (vLLM 0.14+)
+
+vLLM can spawn subprocesses for its engine core. Under Snakepit, this must be
+paired with reliable process-group cleanup to avoid orphan GPU processes.
+
+Configure via:
+
+```elixir
+# config/config.exs
+config :vllm, v1_multiprocessing: :auto  # :auto | :on | :off
+```
+
+Semantics:
+
+- `:off` - forces single-process mode (`VLLM_ENABLE_V1_MULTIPROCESSING=0`)
+- `:on` - forces multiprocessing and fails fast unless Snakepit process-group
+  cleanup is available
+- `:auto` - enables multiprocessing only when safe; otherwise forces off with a warning
 
 ## Timeout Configuration
 

@@ -26,11 +26,18 @@ unwrap_embedding = fn
   list -> list
 end
 
+get_attr = fn ref, attr ->
+  case SnakeBridge.Runtime.get_attr(ref, attr) do
+    {:ok, value} -> value
+    {:error, reason} -> raise "Failed to read #{attr}: #{inspect(reason)}"
+  end
+end
+
 extract_embedding = fn output ->
   extract_from_outputs = fn outputs ->
     cond do
-      VLLM.ref?(outputs) ->
-        VLLM.attr!(outputs, "embedding")
+      SnakeBridge.Ref.ref?(outputs) ->
+        get_attr.(outputs, :embedding)
 
       is_map(outputs) ->
         Map.get(outputs, "embedding") || Map.get(outputs, :embedding) || outputs
@@ -42,9 +49,9 @@ extract_embedding = fn output ->
 
   outputs =
     cond do
-      VLLM.ref?(output) ->
+      SnakeBridge.Ref.ref?(output) ->
         try do
-          VLLM.attr!(output, "outputs")
+          get_attr.(output, :outputs)
         rescue
           _ -> output
         end
@@ -63,15 +70,23 @@ end
 
 IO.puts("Loading embedding model: #{model}")
 
-VLLM.run(fn ->
-  llm =
-    VLLM.llm!(model,
+Snakepit.run_as_script(fn ->
+  {:ok, llm} =
+    Vllm.LLM.new(model,
       runner: "pooling",
       dtype: "float16",
       gpu_memory_utilization: 0.8
     )
 
-  outputs = VLLM.embed!(llm, texts)
+  llm_ref = SnakeBridge.Ref.from_wire_format(llm)
+
+  runtime_opts =
+    case llm_ref.pool_name do
+      nil -> [session_id: llm_ref.session_id]
+      pool_name -> [session_id: llm_ref.session_id, pool_name: pool_name]
+    end
+
+  {:ok, outputs} = Vllm.LLM.embed(llm, texts, __runtime__: runtime_opts)
 
   Enum.zip(texts, outputs)
   |> Enum.each(fn {text, output} ->

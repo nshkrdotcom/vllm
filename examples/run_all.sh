@@ -31,7 +31,9 @@ cleanup() {
 trap cleanup INT TERM
 
 # Configuration
-TIMEOUT_SECONDS="${VLLM_RUN_TIMEOUT_SECONDS:-120}"
+# Default 5 minutes - ML inference needs time for model download + loading + CUDA graph compilation
+TIMEOUT_SECONDS="${VLLM_RUN_TIMEOUT_SECONDS:-300}"
+COMPILE_TIMEOUT_SECONDS="${VLLM_COMPILE_TIMEOUT_SECONDS:-0}"
 MIX_ENV_NAME="${VLLM_MIX_ENV:-prod}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
@@ -69,6 +71,17 @@ echo ""
 
 cd "$PROJECT_DIR"
 
+# Compile once up-front so each example run doesn't re-trigger compilation/codegen.
+echo -e "${BLUE}----${NC} Precompiling (MIX_ENV=${MIX_ENV_NAME}) ${BLUE}----${NC}"
+
+if [[ "$COMPILE_TIMEOUT_SECONDS" -gt 0 ]]; then
+    MIX_ENV="${MIX_ENV_NAME}" timeout --foreground "${COMPILE_TIMEOUT_SECONDS}s" mix compile
+else
+    MIX_ENV="${MIX_ENV_NAME}" mix compile
+fi
+
+echo ""
+
 # Function to run a single example
 run_example() {
     local example="$1"
@@ -86,9 +99,9 @@ run_example() {
     local exit_code=0
 
     if [[ "$TIMEOUT_SECONDS" -gt 0 ]]; then
-        MIX_ENV="${MIX_ENV_NAME}" timeout --foreground "${TIMEOUT_SECONDS}s" mix run "$example_path" || exit_code=$?
+        MIX_ENV="${MIX_ENV_NAME}" timeout --foreground "${TIMEOUT_SECONDS}s" mix run --no-compile "$example_path" || exit_code=$?
     else
-        MIX_ENV="${MIX_ENV_NAME}" mix run "$example_path" || exit_code=$?
+        MIX_ENV="${MIX_ENV_NAME}" mix run --no-compile "$example_path" || exit_code=$?
     fi
 
     local end_time=$(date +%s.%N)

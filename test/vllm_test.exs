@@ -217,4 +217,59 @@ defmodule VLLMTest do
       end
     end
   end
+
+  describe "generated wrappers" do
+    test "Vllm module is loaded" do
+      assert Code.ensure_loaded?(Vllm)
+    end
+
+    test "Vllm.LLM module is generated" do
+      assert Code.ensure_loaded?(Vllm.LLM)
+      assert function_exported?(Vllm.LLM, :new, 1)
+      assert function_exported?(Vllm.LLM, :new, 2)
+      assert function_exported?(Vllm.LLM, :generate, 3)
+      assert function_exported?(Vllm.LLM, :chat, 3)
+    end
+
+    test "Vllm.SamplingParams module is generated" do
+      assert Code.ensure_loaded?(Vllm.SamplingParams)
+      assert function_exported?(Vllm.SamplingParams, :new, 1)
+      assert function_exported?(Vllm.SamplingParams, :new, 2)
+    end
+
+    test "Vllm.PoolingParams module is generated" do
+      assert Code.ensure_loaded?(Vllm.PoolingParams)
+      assert function_exported?(Vllm.PoolingParams, :new, 1)
+      assert function_exported?(Vllm.PoolingParams, :new, 2)
+    end
+
+    test "Vllm.LLMEngine module is generated" do
+      assert Code.ensure_loaded?(Vllm.LLMEngine)
+    end
+
+    test "Vllm.AsyncLLMEngine module is generated" do
+      assert Code.ensure_loaded?(Vllm.AsyncLLMEngine)
+    end
+
+    test "Vllm.RequestOutput module is generated" do
+      assert Code.ensure_loaded?(Vllm.Outputs.RequestOutput)
+    end
+
+    test "Vllm.CompletionOutput module is generated" do
+      assert Code.ensure_loaded?(Vllm.Outputs.CompletionOutput)
+    end
+
+    test "Vllm.Config.ModelConfig module is generated" do
+      assert Code.ensure_loaded?(Vllm.Config.ModelConfig)
+    end
+
+    test "generated modules have correct snakebridge metadata" do
+      assert Vllm.LLM.__snakebridge_library__() == "vllm"
+      assert Vllm.LLM.__snakebridge_python_name__() == "vllm"
+      assert Vllm.LLM.__snakebridge_python_class__() == "LLM"
+
+      assert Vllm.SamplingParams.__snakebridge_library__() == "vllm"
+      assert Vllm.SamplingParams.__snakebridge_python_class__() == "SamplingParams"
+    end
+  end
 end
