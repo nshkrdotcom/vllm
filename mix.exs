@@ -1,7 +1,7 @@
 defmodule VLLM.MixProject do
   use Mix.Project
 
-  @version "0.2.0"
+  @version "0.2.1"
   @source_url "https://github.com/nshkrdotcom/vllm"
 
   def project do
@@ -45,8 +45,8 @@ defmodule VLLM.MixProject do
 
   defp deps do
     [
-      # SnakeBridge - Python bridge for vLLM
-      {:snakebridge, "~> 0.15.0"},
+      # SnakeBridge - Python bridge for vLLM (local dev)
+      {:snakebridge, "~> 0.15.1"},
 
       # JSON encoding
       {:jason, "~> 1.4"},

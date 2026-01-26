@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-26T03:27:02.774334Z",
+  "generated_at": "2026-01-26T06:40:16.410081Z",
   "libraries": {
     "vllm": {
       "elixir_module": "Vllm",
@@ -173,7 +173,7 @@
         "vllm/sampling_params/tokenizer_like.ex",
         "vllm/logits_process/tokenizer_like.ex"
       ],
-      "generated_at": "2026-01-26T03:27:02.728207Z",
+      "generated_at": "2026-01-26T06:40:16.358295Z",
       "path": "lib/snakebridge_generated",
       "python_module": "vllm",
       "python_version": "0.14.0",

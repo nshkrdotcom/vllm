@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-26T03:27:02.781860Z",
+  "generated_at": "2026-01-26T06:40:16.416234Z",
   "issues": [
     {
       "reason": "docstring missing",
@@ -14,9 +14,75 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_xla_check_recompilation",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_standalone_compile",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_nccl_symm_mem",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_enable_inductor_coordinate_descent_tuning",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_conda_packages",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_marlin_use_atomic_add",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.logger",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_media_connector",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_deep_gemm_warmup",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_kv_events_use_int_block_hashes",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_video_loader_backend",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs._o",
       "source": "empty"
     },
     {
@@ -26,9 +92,21 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_triton_gemm",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.ForwardContext._compute_chunked_local_num_tokens",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_fp8_bmm",
       "source": "empty"
     },
     {
@@ -38,15 +116,75 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_logging_color",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_dp_rank_local",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.platform_plugins_group",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_nvidia_smi",
       "source": "empty"
     },
     {
-      "reason": "docstring missing",
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_custom_paged_attn",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_tool_parse_regex_timeout_seconds",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_fp8_mfma_page_attn",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
       "type": "doc_missing",
       "symbol": "Vllm.ForwardContext.current_platform",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_audio_fetch_timeout",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_image_fetch_timeout",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_dp_rank",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Logger.default_logging_config",
       "source": "empty"
     },
     {
@@ -68,9 +206,21 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Plugins.platform_plugins_group",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.all_gather_fake",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Logprobs.prompt_logprobs",
       "source": "empty"
     },
     {
@@ -80,9 +230,33 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.trace_headers",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.logger",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Tracing.extract_trace_headers",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.logger",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_ray_compiled_dag_channel_type",
       "source": "empty"
     },
     {
@@ -98,6 +272,12 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_flashinfer_moe_fp16",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.get_dcp_group",
@@ -110,9 +290,45 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.env_info_fmt",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_sleep_mem_chunk_size",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_moriio_connector_read_mode",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_skip_p2_p_check",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.pretty_str",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.verbose",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_gpt_oss_harmony_system_instructions",
       "source": "empty"
     },
     {
@@ -122,15 +338,81 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_deepep_high_throughput_force_intra_node",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Inputs.singleton_prompt",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_config_root",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_v1_use_outlines_cache",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_debug_workspace",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Plugins.plugins_loaded",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_cachingallocator_config",
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_unified_attention",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_sleep_when_idle",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_v2_model_runner",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Inputs.build_explicit_enc_dec_prompt",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_force_aot_load",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_flashinfer_workspace_buffer_size",
       "source": "empty"
     },
     {
@@ -146,15 +428,99 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_debug_log_api_server_response",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_nixl_abort_request_timeout",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Plugins.stat_logger_plugins_group",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_moriio_post_batch_size",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_ringbuffer_warning_interval",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.default_pip_patterns",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Tasks.supported_task",
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.default_conda_patterns",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_docker_build_context",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Plugins.logger",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Platforms.tpu_platform_plugin",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_execute_model_timeout_seconds",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.batchsize_logging_interval",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_ray_compiled_dag_overlap_comm",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_modelscope",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_enable_cudagraph_gc",
       "source": "empty"
     },
     {
@@ -170,9 +536,27 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_allow_chunked_local_attn_with_hybrid_kv_cache",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_vllm_version",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_enable_responses_api_store",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_configure_logging",
       "source": "empty"
     },
     {
@@ -188,9 +572,57 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.environment_variables",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Scripts.logger",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_blockscale_fp8_gemm_flashinfer",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_fused_moe_chunk_size",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_experimental_parser_context",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_tpu_using_pathways",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_disabled_kernels",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.broadcast_tensor_dict",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_http_timeout_keep_alive",
       "source": "empty"
     },
     {
@@ -200,9 +632,45 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_object_storage_shm_buffer_name",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_mla_disable",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Logger._date_format",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.ForwardContext.create_forward_context",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_engine_iteration_timeout_s",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_moriio_num_workers",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_skinny_gemm",
       "source": "empty"
     },
     {
@@ -212,9 +680,27 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_paged_attn",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.init_world_group",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_enable_inductor_max_autotune",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing._is_otel_imported",
       "source": "empty"
     },
     {
@@ -236,15 +722,63 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_custom_scopes_for_profiling",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.TritonUtils.has_triton",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_cpu_omp_threads_bind",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_allreduce_use_symm_mem",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_moe_dp_chunk_size",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.set_custom_all_reduce",
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.SamplingParams._max_temp",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_windows_version",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_compute_nans_in_logits",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Inputs.prompt_type",
       "source": "empty"
     },
     {
@@ -272,6 +806,30 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_randomize_dp_dummy_inputs",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.batchsize_forward_time",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_gpt_oss_system_tool_mcp_labels",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tracing.logger",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.get_pcp_group",
@@ -284,6 +842,12 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_nixl_side_channel_port",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_pretty_env_info",
@@ -293,6 +857,12 @@
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Plugins.load_plugins_by_group",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_no_usage_stats",
       "source": "empty"
     },
     {
@@ -320,6 +890,18 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_log_model_inspection",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ModelExecutor.__all__",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Tokenizers.cached_tokenizer_from_config",
@@ -329,6 +911,18 @@
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.BeamSearch.create_sort_beams_key_function",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rpc_base_path",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.k_scale_constant",
       "source": "empty"
     },
     {
@@ -344,9 +938,33 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.torch_available",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Platforms.resolve_current_platform_cls_qualname",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_media_loading_thread_count",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_triton_rope",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_bytecode_hook",
       "source": "empty"
     },
     {
@@ -362,9 +980,57 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_enable_fused_moe_activation_chunking",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ToolParsers.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_compile_cache_save_format",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_max_audio_clip_filesize_mb",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_dp_size",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_assets_cache",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_moe_use_deep_gemm",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_cmake_version",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_tool_json_error_automatic_retry",
       "source": "empty"
     },
     {
@@ -392,6 +1058,30 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.LoggingUtils.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_nvtx_scopes_for_profiling",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_has_flashinfer_cubin",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_nvfp4_ct_emulations",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.get_world_group",
@@ -410,9 +1100,75 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_dp_master_port",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Reasoning._reasoning_parsers_to_register",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_python_platform",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_gc_debug",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Connections.global_http_connection",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_mla",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_allow_insecure_serialization",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_engine_ready_timeout_s",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_deep_gemm",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_dbo_comm_sms",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_mooncake_abort_request_timeout",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_v1_output_proc_chunk_size",
       "source": "empty"
     },
     {
@@ -422,9 +1178,21 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_flashinfer_moe_fp4",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_os",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_cache_root",
       "source": "empty"
     },
     {
@@ -440,6 +1208,54 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_debug_mfu_metrics",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_fbgemm",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_rmsnorm",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_assets_cache_model_clean",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_xla_cache_path",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Plugins.default_plugins_group",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ToolParsers._tool_parsers_to_register",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.all_reduce",
@@ -452,15 +1268,45 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Grpc.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_moriio_qp_per_transfer",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Tracing.init_tracer",
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_allow_long_max_model_len",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.ToolParsers.register_lazy_tool_parsers",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_fused_moe_grouped_topk",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_video_fetch_timeout",
       "source": "empty"
     },
     {
@@ -476,15 +1322,69 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_target_device",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_ray_bundle_indices",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.is_uv_venv",
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_media_url_allow_redirects",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_keep_alive_on_engine_death",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_fp8_padding",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.get_tcp_uri",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tasks.generation_tasks",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.EnvOverride.logger",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_disable_compile_cache",
       "source": "empty"
     },
     {
@@ -506,9 +1406,27 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_host_ip",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_loopback_ip",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Platforms.cuda_platform_plugin",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_msgpack_zero_copy_threshold",
       "source": "empty"
     },
     {
@@ -518,9 +1436,93 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Distributed.use_sched_yield",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_mooncake_bootstrap_port",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_log_batchsize_interval",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_fusion_shared_experts",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_deep_gemm_e8_m0",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_gcc_version",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_max_tokens_per_expert_fp4_moe",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.track_batchsize",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_xla_use_spmd",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_do_not_track",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.CollectEnv.environment_variables",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_enable_v1_multiprocessing",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.no_color",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_disable_shared_experts_stream",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_fp4_asm_gemm",
       "source": "empty"
     },
     {
@@ -530,9 +1532,21 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_enable_moe_dp_chunk",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Reasoning.register_lazy_reasoning_parsers",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Outputs.logger",
       "source": "empty"
     },
     {
@@ -548,9 +1562,21 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_precompiled",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_clang_version",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_aot_compile",
       "source": "empty"
     },
     {
@@ -560,21 +1586,129 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.local_rank",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_logging_level",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_ray_per_worker_gpus",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_mha",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_worker_multiproc_method",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_usage_stats_server",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.SamplingParams._sampling_eps",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.get_dp_group",
       "source": "empty"
     },
     {
-      "reason": "docstring missing",
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_trace_function",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
       "type": "doc_missing",
       "symbol": "Vllm.Platforms.current_platform",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.TritonUtils.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_deepepll_nvfp4_dispatch",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_flashinfer_moe_mxfp4_bf16",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Inputs.decoder_only_inputs",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_moe",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_flashinfer_moe_backend",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_flashinfer_moe_fp8",
       "source": "empty"
     },
     {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.patched_fused_scaled_matmul_reduce_scatter_fake",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter_linear",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_dp_master_ip",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_main_cuda_version",
       "source": "empty"
     },
     {
@@ -590,9 +1724,27 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Reasoning.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_use_aiter",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.CollectEnv.get_running_cuda_version",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Logger._format",
       "source": "empty"
     },
     {
@@ -602,9 +1754,75 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_triton_awq",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ScalarType._scalar_types_id_map",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.last_logging_time",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_skip_precompiled_version_suffix",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_ray_dp_pack_strategy",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_deepep_buffer_size_mb",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tokenizers.tokenizer_registry",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms._init_trace",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_log_stats_interval",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Logprobs.sample_logprobs",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.destroy_distributed_environment",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_server_dev_mode",
       "source": "empty"
     },
     {
@@ -614,15 +1832,75 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_moe_padding",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_allow_runtime_lora_updating",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.q_scale_constant",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Platforms.builtin_platform_plugins",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Multimodal.Inputs.nested_tensors",
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_cpu_sgl_kernel",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_mq_max_chunk_bytes_mb",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.multimodal_registry",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Config.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.LogitsProcess.logits_processor",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Config.try_match_architecture_defaults",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.forward_start_time",
       "source": "empty"
     },
     {
@@ -638,6 +1916,24 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_deepep_low_latency_use_mnnvl",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_xgrammar_cache_mb",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_shared_experts_stream_token_threshold",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Tracing.log_tracing_disabled_warning",
@@ -650,15 +1946,141 @@
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_quick_reduce_cast_bf16_to_fp16",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rpc_timeout",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_rocm_quick_reduce_quantization",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Inputs.singleton_inputs",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.SamplingParams.logger",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.reduce_scatter",
       "source": "empty"
     },
     {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Inputs.processor_inputs",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_flashinfer_moe_mxfp4_mxfp8",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_disable_pynccl",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_logging_stream",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Plugins.io_processor_plugins_group",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_ray_wrapped_pp_comm",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.v_scale_constant",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_float32_matmul_precision",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_use_flashinfer_moe_mxfp4_mxfp8_cutlass",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_tpu_bucket_padding_gap",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Tasks.pooling_tasks",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_usage_source",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Logger._methods_to_patch",
+      "source": "empty"
+    },
+    {
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Envs.maybe_convert_bool",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Logger.logger",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Multimodal.__all__",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_logging_prefix",
       "source": "empty"
     },
     {
@@ -671,6 +2093,30 @@
       "reason": "docstring missing",
       "type": "doc_missing",
       "symbol": "Vllm.Distributed.get_inner_dp_world_group",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Utils.mask_64_bits",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Envs.vllm_nixl_side_channel_host",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.ForwardContext.logger",
+      "source": "empty"
+    },
+    {
+      "reason": "attribute docstring not supported",
+      "type": "doc_missing",
+      "symbol": "Vllm.Inputs.__all__",
       "source": "empty"
     },
     {
@@ -2915,11 +4361,11 @@
   },
   "summary": {
     "class_methods": 839,
-    "doc_coverage_ratio": 0.7557364914877869,
+    "doc_coverage_ratio": 0.5773501110288675,
     "doc_tiers": {
-      "empty": 330,
+      "empty": 571,
       "module": 72,
-      "runtime": 891,
+      "runtime": 650,
       "stub": 58
     },
     "functions": 512,
