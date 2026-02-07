@@ -28,9 +28,9 @@
     },
     "python_packages_hash": "sha256:81253f46350805fc69ec8f97def1956b99ad8141743da8f8d82851b81677b21e",
     "python_platform": "x86_64-pc-linux-gnu",
-    "python_runtime_hash": "df2bb64c335c6096abfe779d140288d2ff1f66d033f7472986e3032854e5c9ee",
+    "python_runtime_hash": "c2c20b4745d447551221ec3d4e70f92c270c4609fe3df34fc52ea6dd46e92273",
     "python_version": "3.12.3",
-    "snakebridge_version": "0.15.1"
+    "snakebridge_version": "0.16.0"
   },
   "libraries": {
     "vllm": {
@@ -46,5 +46,5 @@
       "hash": null
     }
   },
-  "version": "0.15.1"
+  "version": "0.16.0"
 }

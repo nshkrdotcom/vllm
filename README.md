@@ -75,7 +75,7 @@ Add `vllm` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:vllm, "~> 0.2.1"}
+    {:vllm, "~> 0.3.0"}
   ]
 end
 ```
