@@ -175,7 +175,7 @@ defmodule VLLM.MixProject do
     [
       name: "vllm",
       description: description(),
-      files: ~w(lib assets mix.exs README.md CHANGELOG.md LICENSE),
+      files: ~w(lib assets mix.exs README.md CHANGELOG.md LICENSE docs examples),
       licenses: ["MIT"],
       links: %{
         "GitHub" => @source_url,
